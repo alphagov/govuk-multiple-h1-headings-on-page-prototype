@@ -1,5 +1,5 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "This will be a guide",
   "useServiceNavigation": true,
   "plugins": {
     "govuk-frontend": {
