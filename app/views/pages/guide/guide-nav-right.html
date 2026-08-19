@@ -66,12 +66,16 @@
     {# Guide side navigation #}
     <div class="govuk-grid-column-one-third">
       <aside> 
-        <nav class="app-subnav" aria-label="Pages in this guide" role="navigation">
-          <header class="govuk-heading-s govuk-!-margin-bottom-2">
-            <span class="govuk-visually-hidden">
+        <nav class="app-subnav" aria-labelledby="subnav-heading">
+          <header class="govuk-!-margin-bottom-2">
+            
+            <h2 id="subnav-heading" class="govuk-caption-m">
+              <span class="govuk-visually-hidden">
               Pages in
-            </span>
-            <h2 class="govuk-caption-m">{{ guideTitle }}</h2>
+              </span>
+              {{ guideTitle }}
+            </h2>
+            
           </header>
           <ul class="app-subnav__section">
             <li class="app-subnav__section-item">
