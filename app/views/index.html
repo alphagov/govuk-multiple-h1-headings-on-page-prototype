@@ -1,19 +1,37 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Home - GOV.UK Headings prototype" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
     <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+      Prototype
     </h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    <h2 class="govuk-heading-l">Headings examples</h2>
+
+    <p class="govuk-body">
+      Exploring different ways to display a combined heading for a guide title and chapter page</p>
+
+   
+
+    <h2 class="govuk-heading-l">Side navigation examples</h2>
+
+    <h2 class="govuk-heading-l">Chapter examples</h2>
+
+    <h2 class="govuk-heading-l">Guide examples</h2>
+
+     <p class="govuk-body"><a class="govuk-link" href="/pages/guide.html">Standard guide</a></p>
+
+     <p class="govuk-body">Guide with a <a class="govuk-link" href="/pages/guide/guide-nav-right.html">side navigation on the right</a></p>
+
+     <p class="govuk-body">Guide with a <a class="govuk-link" href="/pages/guide/guide-nav-left.html">side navigation on the left</a></p>
+
+     <p class="govuk-body">Guide with a <a class="govuk-link" href="/pages/guide/guide-nav-left-top.html">side navigation on the top left</a></p>
+
   </div>
 </div>
 

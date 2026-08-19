@@ -1,0 +1,137 @@
+{% extends "layouts/main.html" %}
+
+{% set chapterTitle = "Eligibility" %}
+{% set guideTitle = "Universal Credit" %}
+
+{% block pageTitle %}
+  {{ guideTitle }}: {{ chapterTitle }} - GOV.UK
+{% endblock %}
+
+{# Blank header with no service name for this page #}
+{% block header %}
+  <header>
+    {{govukHeader()}}
+  </header>
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Benefits",
+        href: "#"
+      },
+      {
+        text: "Benefits and financial support if you're on a low income",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+
+      {# Guide side navigation #}
+      <aside> 
+        <nav class="app-subnav" aria-labelledby="subnav-heading">
+          <header class="govuk-!-margin-bottom-2">
+            
+            <h2 id="subnav-heading" class="govuk-caption-m">
+              <span class="govuk-visually-hidden">
+              Pages in
+              </span>
+              {{ guideTitle }}
+            </h2>
+            
+          </header>
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                What Universal Credit is
+              </a>
+            </li>
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#" aria-current="page">
+                {{ chapterTitle }}
+              </a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                What you'll get
+              </a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                How your wages affect your payments
+              </a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                How you're paid
+              </a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                Your claimant commitment
+              </a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                Get an advance or other financial support
+              </a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                Report a change of circumstances
+              </a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                Contact Universal Credit
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        <span role="text">
+          <!-- Chapter title -->
+          {{ chapterTitle }}
+          <span class="govuk-caption-xl">
+            <span class="govuk-visually-hidden"> - </span>
+            <!-- Guide title -->
+              {{ guideTitle }}
+          </span>
+        </span>
+      </h1>
+
+
+      <div class="govuk-prototype-kit-common-templates-mainstream-guide-body">
+
+        {% include "./partials/universal-credit/eligibility.html" %}
+
+        {% include "./partials/universal-credit/related-content.html" %}
+
+      </div>
+
+  
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
