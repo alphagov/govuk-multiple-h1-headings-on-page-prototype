@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %}
+
+{% set guideTitle = "Universal Credit" %}
+
+{% block pageTitle %}
+  {{ guideTitle }} - GOV.UK
+{% endblock %}
+
+{# Blank header with no service name for this page #}
+{% block header %}
+  <header>
+    {{govukHeader()}}
+  </header>
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Benefits",
+        href: "#"
+      },
+      {
+        text: "Benefits and financial support if you're on a low income",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+                <!-- Guide title -->
+                {{ guideTitle }}
+        </h1>
+    </div>
+
+</div>
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        
+        <ul class="govuk-list">
+            <li>
+                <a class="govuk-link" href="#">
+                    What Universal Credit is
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="/pages/guide/guide-nav-left.html">
+                    Eligibility - click me
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                    What you'll get
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                    How your wages affect your payments
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                    How you're paid
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                    How to claim
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                   Your claimant commitment
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                   Get an advance or other financial support
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                   Report a change of circumstances
+                </a>
+            </li>
+            <li>
+                <a class="govuk-link" href="#">
+                   Contact Universal Credit
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}
