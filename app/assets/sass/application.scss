@@ -8,7 +8,7 @@
 .app-subnav {
   // Since the back to top link is outside the flow of the document we need to create a space for it.
   // This number is magic and was determined by manually judging the visual spacing.
-  margin-bottom: 100px;
+  //margin-bottom: 100px;
   padding-right: govuk-spacing(3);
   @include govuk-font(16);
 }
@@ -72,6 +72,8 @@
   }
 }
 
+.related-navigation-topic {
+  border-top: 2px solid #1d70b8;
 // Styles for travel advice guide
 
 .gem-c-metadata {
