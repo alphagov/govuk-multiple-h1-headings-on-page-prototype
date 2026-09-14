@@ -74,7 +74,8 @@
 
 .related-navigation-topic {
   border-top: 2px solid #1d70b8;
-// Styles for travel advice guide
+  // Styles for travel advice guide
+}
 
 .gem-c-metadata {
   @include govuk-text-colour;
@@ -93,9 +94,9 @@
 }
 
 @media(min-width: 40.0625em) {
-    .gem-c-metadata {
-        margin-bottom:40px
-    }
+  .gem-c-metadata {
+    margin-bottom: 40px
+  }
 }
 
 .direction-rtl .gem-c-metadata,
