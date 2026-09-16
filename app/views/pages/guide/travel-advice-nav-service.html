@@ -1,0 +1,107 @@
+{% extends "layouts/main.html" %}
+
+{% set chapterTitle = "Warnings and insurance" %}
+{% set guideTitle = "France" %}
+
+{% set guideLinks = [
+  { text: "Warnings and insurance", href: "#", current: true },
+  { text: "Safety and security", href: "#" },
+  { text: "Health", href: "#" },
+  { text: "Getting help", href: "#" }
+] %}
+
+{% block pageTitle %}
+  {{ guideTitle }} travel advice - {{ chapterTitle }} - GOV.UK
+{% endblock %}
+
+{# Blank header with no service name for this page #}
+{% block header %}
+  <header>
+    {{govukHeader()}}
+  </header>
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Passports, travel and living abroad",
+        href: "#"
+      },
+      {
+        text: "Travel abroad",
+        href: "#"
+      },
+      {
+        text: "Foreign travel advice",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row app-page-with-service-nav">
+  
+  {# Main content and mobile dropdown column #}
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      <span role="text">
+        <!-- Chapter title -->
+        {{ chapterTitle }}
+        <span class="govuk-caption-xl">
+          <span class="govuk-visually-hidden"> - </span>
+          <!-- Guide title -->
+            {{ guideTitle }} travel advice
+        </span>
+      </span>
+    </h1>
+
+    {# Mobile Service Navigation (Dropdown) #}
+    {{ govukServiceNavigation({
+      serviceName: "Pages in " + guideTitle + " travel advice",
+      serviceUrl: "#",
+      navigation: guideLinks
+    }) }}
+
+    <div class="govuk-prototype-kit-common-templates-mainstream-guide-body">
+      {% include "./partials/travel-advice/warnings-and-insurance.html" %}
+      {% include "./partials/travel-advice/related-content.html" %}
+    </div>
+
+  </div>
+
+  {# Desktop side navigation #}
+  <div class="govuk-grid-column-one-third">
+    <aside> 
+      <nav class="app-subnav" aria-label="Pages in this guide" role="navigation">
+        <header class="govuk-heading-s govuk-!-margin-bottom-2">
+          <span class="govuk-visually-hidden">
+            Pages in
+          </span>
+          <h2 class="govuk-caption-m">{{ guideTitle }} travel advice</h2>
+        </header>
+        <ul class="app-subnav__section">
+          {% for item in guideLinks %}
+            <li class="app-subnav__section-item {% if item.current %}app-subnav__section-item--current{% endif %}">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" 
+                 href="{{ item.href }}" 
+                 {% if item.current %}aria-current="page"{% endif %}>
+                {{ item.text }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+</div>
+
+{% endblock %}
