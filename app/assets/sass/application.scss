@@ -72,6 +72,24 @@
   }
 }
 
+.app-page-with-service-nav {
+  .govuk-service-navigation {
+    margin-bottom: govuk-spacing(3);
+
+    @include govuk-media-query($from: tablet) {
+      display: none;
+    }
+  }
+
+  .app-subnav {
+    display: none;
+
+    @include govuk-media-query($from: tablet) {
+      display: block;
+    }
+  }
+}
+
 .related-navigation-topic {
   border-top: 2px solid #1d70b8;
   // Styles for travel advice guide
