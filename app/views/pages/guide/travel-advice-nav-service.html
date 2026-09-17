@@ -80,12 +80,13 @@
   {# Desktop side navigation #}
   <div class="govuk-grid-column-one-third">
     <aside> 
-      <nav class="app-subnav" aria-label="Pages in this guide" role="navigation">
+      <nav class="app-subnav" aria-labelledby="subnav-heading">
         <header class="govuk-heading-s govuk-!-margin-bottom-2">
-          <span class="govuk-visually-hidden">
-            Pages in
-          </span>
-          <h2 class="govuk-caption-m">{{ guideTitle }} travel advice</h2>
+          <h2 id="subnav-heading" class="govuk-caption-m">
+            <span class="govuk-visually-hidden">
+              Pages in
+            </span>
+            {{ guideTitle }} travel advice</h2>
         </header>
         <ul class="app-subnav__section">
           {% for item in guideLinks %}
