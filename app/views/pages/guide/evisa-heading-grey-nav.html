@@ -1,19 +1,16 @@
 {% extends "layouts/main.html" %}
 
-{% set chapterTitle = "Eligibility" %}
-{% set guideTitle = "Universal Credit" %}
+{% set chapterTitle = "View your eVisa and get a share code to prove your immigration status" %}
+{% set guideTitle = "eVisas: access and use your online immigration status" %}
 
 {% set guideLinks = [
-  { text: "What Universal Credit is", href: "#" },
-  { text: "Eligibility", href: "#", current: true },
-  { text: "What you'll get", href: "#" },
-  { text: "How your wages affect your payments", href: "#" },
-  { text: "How you're paid", href: "#" },
-  { text: "How to claim", href: "#" },
-  { text: "Your claimant commitment", href: "#" },
-  { text: "Get an advance or other financial support", href: "#" },
-  { text: "Report a change of circumstances", href: "#" },
-  { text: "Contact Universal Credit", href: "#" }
+  { text: "What an eVisa is", href: "#" },
+  { text: "Set up a UKVI account to access your eVisa", href: "#" },
+  { text: "Get an eVisa if you have settlement in the UK", href: "#" },
+  { text: "View your eVisa and get a share code to prove your immigration status", href: "#", current: true },
+  { text: "Travel with your eVisa", href: "#" },
+  { text: "Update your details in your UKVI account", href: "#" },
+  { text: "Report an error with your eVisa", href: "#" }
 ] %}
 
 {% block pageTitle %}
@@ -35,11 +32,11 @@
         href: "#"
       },
       {
-        text: "Benefits",
+        text: "Visas and immigration",
         href: "#"
       },
       {
-        text: "Benefits and financial support if you're on a low income",
+        text: "What you need to do",
         href: "#"
       }
     ]
@@ -56,7 +53,7 @@
       <span role="text">
         <!-- Chapter title -->
         {{ chapterTitle }}
-        <span class="govuk-caption-xl">
+        <span class=" govuk-visually-hidden">
           <span class="govuk-visually-hidden"> - </span>
           <!-- Guide title -->
             {{ guideTitle }}
@@ -64,15 +61,15 @@
       </span>
     </h1>
 
-    {# Guide side navigation #}
+    {# Guide Desktop side navigation #}
       <nav class="app-subnav" aria-labelledby="subnav-heading">
         <header class="govuk-!-margin-bottom-2">
           
-          <h2 id="subnav-heading" class="govuk-caption-m govuk-visually-hidden">
+          <h2 id="subnav-heading" class="govuk-guide-title heading-grey">
             <span class="govuk-visually-hidden">
             Pages in
             </span>
-            {{ guideTitle }}
+          {{ guideTitle }}
           </h2>
           
         </header>
@@ -89,25 +86,24 @@
         </ul>
       </nav>
 
-
   </div>
 </div>
 
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds ">
-        {% include "./partials/universal-credit/eligibility.html" %}
+        {% include "./partials/evisas/view-your-evisa.html" %}
     </div>
 
     <div class="govuk-grid-column-one-third ">
-      {% include "./partials/universal-credit/related-content.html" %}
+      {% include "./partials/evisas/related-content.html" %}
     </div>
 </div>
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    {% include "./partials/universal-credit/explore-topic.html" %}
+    {% include "./partials/evisas/explore-topic.html" %}
   </div>
 </div>
 
