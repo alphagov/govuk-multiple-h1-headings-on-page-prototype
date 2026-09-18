@@ -63,9 +63,11 @@
       </span>
     </h1>
 
+
     {# Mobile Service Navigation (Dropdown) #}
     {{ govukServiceNavigation({
-      serviceName: "Pages in " + guideTitle + " travel advice",
+      menuButtonText: guideTitle " travel advice",
+      menuButtonLabel: "Pages in " + guideTitle + " travel advice",
       serviceUrl: "#",
       navigation: guideLinks
     }) }}

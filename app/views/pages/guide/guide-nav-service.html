@@ -64,12 +64,13 @@
       </span>
     </h1>
 
-    {# Mobile Service Navigation (Dropdown) #}
-    {{ govukServiceNavigation({
-      serviceName: "Pages in " + guideTitle,
-      serviceUrl: "#",
-      navigation: guideLinks
-    }) }}
+      {# Mobile Service Navigation (Dropdown) #}
+      {{ govukServiceNavigation({
+        menuButtonText: guideTitle,
+        menuButtonLabel: "Pages in " + guideTitle,
+        serviceUrl: "#",
+        navigation: guideLinks
+      }) }}
 
     {# Guide side navigation (Desktop) #}
     <nav class="app-subnav" aria-labelledby="subnav-heading">
