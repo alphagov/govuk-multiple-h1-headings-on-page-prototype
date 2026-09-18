@@ -967,3 +967,67 @@ $top-border: solid 1px govuk-functional-colour("border");
     @include govuk-font(24, $weight: bold);
   }
 }
+
+// Inverse header styles from:
+
+.gem-c-inverse-header {
+  width: 100%;
+  background-color: govuk-colour("blue", $variant: "tint-80");
+  margin-bottom: govuk-spacing(6);
+  padding: govuk-spacing(3) govuk-spacing(6) govuk-spacing(6);
+  box-sizing: border-box;
+
+  @include govuk-media-query($until: desktop) {
+    padding-left: govuk-spacing(3);
+    padding-right: govuk-spacing(3);
+  }
+}
+
+.gem-c-inverse-header__subtext {
+  color: govuk-colour("white");
+  margin: 0;
+  @include govuk-font($size: 16, $line-height: 1.5);
+}
+
+.gem-c-inverse-header__link {
+  &:link,
+  &:visited,
+  &:active {
+    color: govuk-colour("black");
+  }
+}
+
+.gem-c-inverse-header--full-width {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: govuk-spacing(3);
+}
+
+@include govuk-media-query($media-type: print) {
+  .gem-c-inverse-header {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 2pt solid govuk-functional-colour(print-text);
+
+    &,
+    & * {
+      color: govuk-functional-colour(print-text) !important; // stylelint-disable-line declaration-no-important
+    }
+  }
+}
+
+.breadcrumb-wrapper {
+  background-color: govuk-colour("blue", $variant: "tint-80");
+  // Setting the overflow to auto is required to prevent the breadcrumb
+  // component's margin from collapsing.
+  overflow: auto;
+
+  @include govuk-media-query($from: "tablet") {
+    padding-bottom: govuk-spacing(3);
+  }
+}
+
+.guide-title {
+  colour: govuk-functional-colour("secondary-text")
+}
