@@ -56,7 +56,7 @@
         <nav class="app-subnav" aria-labelledby="subnav-heading">
           <header class="govuk-!-margin-bottom-2">
             
-            <h2 id="subnav-heading" class="govuk-caption-m">
+            <h2 id="subnav-heading" class="govuk-heading-s">
               <span class="govuk-visually-hidden">
               Pages in
               </span>
@@ -95,7 +95,8 @@
 
       {# Mobile Service Navigation (Dropdown) #}
       {{ govukServiceNavigation({
-        serviceName: "Pages in " + guideTitle,
+        menuButtonText: guideTitle,
+        menuButtonLabel: "Pages in " + guideTitle,
         serviceUrl: "#",
         navigation: guideLinks
       }) }}

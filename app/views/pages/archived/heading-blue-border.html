@@ -43,7 +43,7 @@
       <span role="text">
         <!-- Chapter title -->
         {{ chapterTitle }}
-        <span class="govuk-guide-title govuk-visually-hidden">
+        <span class="govuk-guide-title heading-blue-border">
           <span class="govuk-visually-hidden"> - </span>
           <!-- Guide title -->
             {{ guideTitle }}
@@ -52,13 +52,13 @@
     </h1>
 
     {# Guide side navigation #}
-      <nav class="app-subnav guide-navigation" aria-labelledby="subnav-heading">
-        <header class="">
+      <nav class="app-subnav" aria-labelledby="subnav-heading">
+        <header class="govuk-!-margin-bottom-2">
           
-          <h2 id="subnav-heading" class="govuk-heading-s govuk-!-margin-bottom-0">
-            <span class="govuk-body">
+          <h2 id="subnav-heading" class="govuk-heading-s govuk-visually-hidden">
+            <span class="govuk-visually-hidden">
             Pages 
-            </span> <br>
+            </span>
            in {{ guideTitle }}
           </h2>
           
@@ -110,18 +110,18 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds ">
-        {% include "./partials/evisas/view-your-evisa.html" %}
+        {% include "../guide/partials/evisas/view-your-evisa.html" %}
     </div>
 
     <div class="govuk-grid-column-one-third ">
-      {% include "./partials/evisas/related-content.html" %}
+      {% include "../guide/partials/evisas/related-content.html" %}
     </div>
 </div>
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    {% include "./partials/evisas/explore-topic.html" %}
+    {% include "../guide/partials/evisas/explore-topic.html" %}
   </div>
 </div>
 
