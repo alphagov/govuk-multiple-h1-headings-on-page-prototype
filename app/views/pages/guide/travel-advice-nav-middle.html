@@ -48,7 +48,27 @@
 
   <div class="govuk-grid-row app-page-with-service-nav">
 
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-two-thirds app-page-with-service-nav">
+
+      <h1 class="govuk-heading-xl">
+        <span role="text">
+          <!-- Chapter title -->
+          {{ chapterTitle }}
+          <span class="govuk-caption-xl">
+            <span class="govuk-visually-hidden"> - </span>
+            <!-- Guide title -->
+              {{ guideTitle }} travel advice
+          </span>
+        </span>
+      </h1>
+
+      {# Mobile Service Navigation (Dropdown) #}
+      {{ govukServiceNavigation({
+        menuButtonText: guideTitle + " travel advice",
+        menuButtonLabel: "Pages in " + guideTitle + " travel advice",
+        serviceUrl: "#",
+        navigation: guideLinks
+      }) }}
 
       {# Guide side navigation #}
       <aside> 
@@ -72,29 +92,6 @@
           </ul>
         </nav>
       </aside>
-    </div>
-
-    <div class="govuk-grid-column-two-thirds app-page-with-service-nav">
-
-      <h1 class="govuk-heading-xl">
-        <span role="text">
-          <!-- Chapter title -->
-          {{ chapterTitle }}
-          <span class="govuk-caption-xl">
-            <span class="govuk-visually-hidden"> - </span>
-            <!-- Guide title -->
-              {{ guideTitle }} travel advice
-          </span>
-        </span>
-      </h1>
-
-      {# Mobile Service Navigation (Dropdown) #}
-      {{ govukServiceNavigation({
-        menuButtonText: guideTitle + " travel advice",
-        menuButtonLabel: "Pages in " + guideTitle + " travel advice",
-        serviceUrl: "#",
-        navigation: guideLinks
-      }) }}
 
 
       <div class="govuk-prototype-kit-common-templates-mainstream-guide-body">
