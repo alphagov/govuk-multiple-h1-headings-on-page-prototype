@@ -1037,3 +1037,9 @@ $top-border: solid 1px govuk-functional-colour("border");
 .guide-title {
   colour: govuk-functional-colour("secondary-text")
 }
+
+.gem-c-inverse-header {
+  .govuk-chapter-title {
+    color: govuk-colour("black");
+  }
+}

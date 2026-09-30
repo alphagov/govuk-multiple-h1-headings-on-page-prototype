@@ -1,14 +1,14 @@
 {% extends "layouts/main.html" %}
 
-{% set chapterTitle = "View your eVisa and get a share code to prove your immigration status" %}
+{% set chapterTitle = "Travel with your eVisa" %}
 {% set guideTitle = "eVisas: access and use your online immigration status" %}
 
 {% set guideLinks = [
   { text: "What an eVisa is", href: "#" },
   { text: "Set up a UKVI account to access your eVisa", href: "#" },
   { text: "Get an eVisa if you have settlement in the UK", href: "#" },
-  { text: "View your eVisa and get a share code to prove your immigration status", href: "#", current: true },
-  { text: "Travel with your eVisa", href: "../travel-with-evisa/guide-nav-middle-blue-caption-bottom-flip.html" },
+  { text: "View your eVisa and get a share code to prove your immigration status", href: "../view-your-evisa/guide-nav-middle-blue-caption-bottom-flip.html"},
+  { text: "Travel with your eVisa", href: "#", current: true  },
   { text: "Update your details in your UKVI account", href: "#" },
   { text: "Report an error with your eVisa", href: "#" }
 ] %}
@@ -114,7 +114,7 @@
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds ">
-            {% include "../chapters-content/_view-your-evisa.html" %}
+            {% include "../chapters-content/_travel-with-evisa.html" %}
         </div>
 
         <div class="govuk-grid-column-one-third ">
