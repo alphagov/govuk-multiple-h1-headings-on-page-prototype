@@ -3,16 +3,17 @@
 {% set chapterTitle = "Warnings and insurance" %}
 {% set guideTitle = "France" %}
 
-{% block pageTitle %}
-  {{ guideTitle }} travel advice - {{ chapterTitle }} - GOV.UK
-{% endblock %}
-
 {% set guideLinks = [
   { text: "Warnings and insurance", href: "#", current: true },
   { text: "Safety and security", href: "#" },
   { text: "Health", href: "#" },
   { text: "Getting help", href: "#" }
 ] %}
+
+{% block pageTitle %}
+  {{ guideTitle }} travel advice - {{ chapterTitle }} - GOV.UK
+{% endblock %}
+
 
 {# Blank header with no service name for this page #}
 {% block header %}
