@@ -1,0 +1,142 @@
+<p class="govuk-body">You should keep your personal details and passport or travel document information up to date so that:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        the details are correct when you view your eVisa and get a share code to prove your immigration status 
+    </li>
+    <li>
+        you can travel with your current passport or travel document
+    </li>
+    <li>
+        UK Visas and Immigration (UKVI) can contact you, for example if you’re waiting for a visa decision or to have your documents returned
+    </li>
+</ul>
+
+<p class="govuk-body">You update your details in your UKVI account.</p>
+
+<p class="govuk-body">If your UKVI account is not up to date you might experience delays when you travel or when waiting for a visa decision.</p>
+
+<h2 class="govuk-heading-l">
+What you need to update
+</h2>
+
+<p class="govuk-body">You should update your UKVI account if you change your:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        passport or travel document 
+    </li>
+    <li>
+       name
+    </li>
+    <li>
+        mobile phone number
+    </li>
+    <li>
+        email address
+ 
+    </li>
+    <li>
+       home address
+    </li>
+    <li>
+        postal address
+    </li>
+</ul>
+
+{% call govukInsetText() %}
+  You cannot change your name or your passport or travel document if you’re waiting for a visa application decision.
+{% endcall %}
+
+<p class="govuk-body">You can also:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        correct your date of birth 
+    </li>
+    <li>
+       add or change a nationality, for example if you have dual nationality
+    </li>
+    <li>
+        add another passport or travel document
+    </li>
+    <li>
+        change your photo, for example if your appearance has changed and you cannot be recognised from your current photo
+    </li>
+
+</ul>
+
+<p class="govuk-body">If you change your photo, you must make sure it meets the rules for digital photos. Your photo will be rejected if it does not meet the rules.</p>
+
+<h2 class="govuk-heading-l">
+Update your details
+</h2>
+
+<p class="govuk-body">You’ll need the details you use to sign in to your UKVI account. This could be your:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        passport
+    </li>
+    <li>
+       national identity card
+    </li>
+    <li>
+        biometric residence card (BRC) - this can be valid or expired
+    </li>
+    <li>
+        expired biometric residence permit (BRP)
+    </li>
+      <li>
+        UKVI customer number
+    </li>
+
+</ul>
+
+<p class="govuk-body">You’ll also need access to the mobile phone number or email address you use to sign in to your UKVI account.</p>
+
+<p class="govuk-body">If you’re updating your name, date of birth or nationality then you’ll need an identity document that proves that it has changed.</p>
+
+{% call govukInsetText() %}
+  You can only use this service to update your UKVI account details. You cannot update any immigration details, for example a visa or a citizenship application.
+{% endcall %}
+
+{{ govukButton({
+  text: "Update your UKVI account",
+  href: "#",
+  isStartButton: true
+}) }}
+
+<h2 class="govuk-heading-l">
+When you cannot use this service
+</h2>
+
+<p class="govuk-body">Content</p>
+
+<h2 class="govuk-heading-l">
+Update details for someone else
+</h2>
+
+<p class="govuk-body">Content</p>
+
+<h2 class="govuk-heading-l">
+Get help
+</h2>
+
+<p class="govuk-body">Content</p>
+
+{# Pagination #}
+
+<nav class="govuk-pagination govuk-pagination--block" aria-label="Pagination">
+
+  {% include "../../partials/_next_pagination.html" %}
+
+  <hr class="govuk-section-break govuk-section-break--visible">
+
+  {% include "../../partials/_previous_pagination.html" %}
+
+</nav>
+
+<p class="govuk-body govuk-!-margin-bottom-8">
+    <a class="govuk-link" href="#">View a printable version of the whole guide</a>
+</p>

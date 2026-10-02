@@ -99,6 +99,7 @@
   @include govuk-text-colour;
   @include govuk-font(16);
   // @include responsive-bottom-margin;
+  margin-bottom: 20px;
 
   a {
     font-weight: bold;
@@ -109,6 +110,11 @@
   .gem-c-metadata__definition-link {
     font-weight: normal;
   }
+}
+
+.metadata-blue {
+  border-top: 1px solid $govuk-border-colour;
+  padding-top: 10px;
 }
 
 @media(min-width: 40.0625em) {
@@ -1030,4 +1036,10 @@ $top-border: solid 1px govuk-functional-colour("border");
 
 .guide-title {
   colour: govuk-functional-colour("secondary-text")
+}
+
+.gem-c-inverse-header {
+  .govuk-chapter-title {
+    color: govuk-colour("black");
+  }
 }

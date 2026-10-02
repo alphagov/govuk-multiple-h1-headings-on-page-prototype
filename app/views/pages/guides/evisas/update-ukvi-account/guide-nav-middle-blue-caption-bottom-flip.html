@@ -1,19 +1,24 @@
 {% extends "layouts/main.html" %}
 
-{% set chapterTitle = "Eligibility" %}
-{% set guideTitle = "Universal Credit" %}
+{% set chapterTitle = "Update your details in your UKVI account" %}
+{% set guideTitle = "eVisas: access and use your online immigration status" %}
+
+{% set layoutPath = "/guide-nav-middle-blue-caption-bottom-flip.html" %}
+
+{% set nextChapterTitle = "Report an error with your eVisa" %}
+{% set nextChapterPath = "../report-error-evisa" %}
+
+{% set previousChapterTitle = "Travel with your eVisa" %}
+{% set previousChapterPath = "../travel-with-evisa" %}
 
 {% set guideLinks = [
-  { text: "What Universal Credit is", href: "#" },
-  { text: "Eligibility", href: "#", current: true },
-  { text: "What you'll get", href: "#" },
-  { text: "How your wages affect your payments", href: "#" },
-  { text: "How you're paid", href: "#" },
-  { text: "How to claim", href: "#" },
-  { text: "Your claimant commitment", href: "#" },
-  { text: "Get an advance or other financial support", href: "#" },
-  { text: "Report a change of circumstances", href: "#" },
-  { text: "Contact Universal Credit", href: "#" }
+  { text: "What an eVisa is", href: "../evisa" ~ layoutPath },
+  { text: "Set up a UKVI account to access your eVisa", href: "../set-up-ukvi-account" ~ layoutPath },
+  { text: "Get an eVisa if you have settlement in the UK", href: "../get-evisa-settlement-uk" ~ layoutPath },
+  { text: "View your eVisa and get a share code to prove your immigration status", href: "../view-your-evisa/" ~ layoutPath },
+  { text: "Travel with your eVisa", href: "../travel-with-evisa" ~ layoutPath  },
+  { text: "Update your details in your UKVI account", href: "../update-ukvi-account" ~ layoutPath, current: true },
+  { text: "Report an error with your eVisa", href: "../report-error-evisa" ~ layoutPath }
 ] %}
 
 {% block pageTitle %}
@@ -40,10 +45,10 @@
               <a class="govuk-breadcrumbs__link" href="#">Home</a>
             </li>
             <li class="govuk-breadcrumbs__list-item">
-              <a class="govuk-breadcrumbs__link" href="#">Benefits</a>
+              <a class="govuk-breadcrumbs__link" href="#">Visas and immigration</a>
             </li>
             <li class="govuk-breadcrumbs__list-item">
-              <a class="govuk-breadcrumbs__link" href="#">Benefits and financial support if you're on a low income</a>
+              <a class="govuk-breadcrumbs__link" href="#">What you need to do</a>
             </li>
           </ol>
         </nav>
@@ -54,20 +59,19 @@
 
 <main id="content" class="content" lang="en">
 
-  <header class="gem-c-inverse-header gem-c-inverse-header--full-width govuk-!-padding-bottom-2 govuk-!-margin-bottom-2">
+  <header class="gem-c-inverse-header gem-c-inverse-header--full-width govuk-!-padding-bottom-6 govuk-!-margin-bottom-6">
     <div class="govuk-width-container"> 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
           {# Chapter heading #}
-          <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-            <span role="text">
-              <!-- Chapter title -->
+          <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
+             
+             {{ guideTitle }}
+            <span class="govuk-caption-xl govuk-chapter-title govuk-!-margin-top-6">
+              <span class="govuk-visually-hidden"> - </span>
+              <!-- Guide title -->
               {{ chapterTitle }}
-              <span class="govuk-heading-l govuk-!-padding-top-5 guide-title">
-                <span class="govuk-visually-hidden"> - </span>
-                <!-- Guide title -->
-                  {{ guideTitle }}
               </span>
             </span>
           </h1>
@@ -109,17 +113,17 @@
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds ">
-            {% include "./partials/universal-credit/eligibility.html" %}
+            {% include "../chapters-content/_update-ukvi-account.html" %}
         </div>
 
         <div class="govuk-grid-column-one-third ">
-          {% include "./partials/universal-credit/related-content.html" %}
+          {% include "../partials/_related-content.html" %}
         </div>
     </div>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        {% include "./partials/universal-credit/explore-topic.html" %}
+        {% include "../partials/_explore-topic.html" %}
       </div>
     </div>
   </div>
