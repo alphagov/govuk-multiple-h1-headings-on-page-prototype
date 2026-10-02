@@ -3,14 +3,22 @@
 {% set chapterTitle = "Get an eVisa if you have settlement in the UK" %}
 {% set guideTitle = "eVisas: access and use your online immigration status" %}
 
+{% set layoutPath = "/guide-nav-middle-blue-caption-bottom-flip.html" %}
+
+{% set nextChapterTitle = "View your eVisa and get a share code to prove your immigration status" %}
+{% set nextChapterPath = "../view-your-evisa" %}
+
+{% set previousChapterTitle = "Set up a UKVI account to access your eVisa" %}
+{% set previousChapterPath = "../set-up-ukvi-account" %}
+
 {% set guideLinks = [
-  { text: "What an eVisa is", href: "../evisa/guide-nav-middle-blue-caption-bottom-flip.html" },
-  { text: "Set up a UKVI account to access your eVisa", href: "../set-up-ukvi-account/guide-nav-middle-blue-caption-bottom-flip.html" },
-  { text: "Get an eVisa if you have settlement in the UK", href: "../get-evisa-settlement-uk/guide-nav-middle-blue-caption-bottom-flip.html", current: true },
-  { text: "View your eVisa and get a share code to prove your immigration status", href: "../view-your-evisa/guide-nav-middle-blue-caption-bottom-flip.html"},
-  { text: "Travel with your eVisa", href: "../travel-with-evisa/guide-nav-middle-blue-caption-bottom-flip.html"  },
- { text: "Update your details in your UKVI account", href: "../update-ukvi-account/guide-nav-middle-blue-caption-bottom-flip.html" },
-  { text: "Report an error with your eVisa", href: "../report-error-evisa/guide-nav-middle-blue-caption-bottom-flip.html" }
+  { text: "What an eVisa is", href: "../evisa" ~ layoutPath },
+  { text: "Set up a UKVI account to access your eVisa", href: "../set-up-ukvi-account" ~ layoutPath  },
+  { text: "Get an eVisa if you have settlement in the UK", href: "../get-evisa-settlement-uk" ~ layoutPath , current: true },
+  { text: "View your eVisa and get a share code to prove your immigration status", href: "../view-your-evisa" ~ layoutPath},
+  { text: "Travel with your eVisa", href: "../travel-with-evisa" ~ layoutPath   },
+ { text: "Update your details in your UKVI account", href: "../update-ukvi-account" ~ layoutPath  },
+  { text: "Report an error with your eVisa", href: "../report-error-evisa" ~ layoutPath  }
 ] %}
 
 {% block pageTitle %}
@@ -51,7 +59,7 @@
 
 <main id="content" class="content" lang="en">
 
-  <header class="gem-c-inverse-header gem-c-inverse-header--full-width govuk-!-padding-bottom-8 govuk-!-margin-bottom-6">
+  <header class="gem-c-inverse-header gem-c-inverse-header--full-width govuk-!-padding-bottom-6 govuk-!-margin-bottom-6">
     <div class="govuk-width-container"> 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
@@ -60,21 +68,12 @@
           <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
              
              {{ guideTitle }}
-            <span class="govuk-caption-xl govuk-chapter-title govuk-!-margin-top-2">
+            <span class="govuk-caption-xl govuk-chapter-title govuk-!-margin-top-6">
               <span class="govuk-visually-hidden"> - </span>
               <!-- Guide title -->
               {{ chapterTitle }}
               </span>
             </span>
-            {# <span role="text">
-              <!-- Chapter title -->
-              {{ chapterTitle }}
-              <span class="govuk-heading-l govuk-!-font-weight-regular govuk-!-margin-bottom-0 govuk-!-margin-top-2 govuk-font-">
-                <span class="govuk-visually-hidden"> - </span>
-                <!-- Guide title -->
-                  {{ guideTitle }}
-              </span>
-            </span> #}
           </h1>
         </div>
       </div>
