@@ -4,17 +4,18 @@
 {% set guideTitle = "eVisas: access and use your online immigration status" %}
 
 {% set layoutPath = "/guide-nav-middle-blue-caption-bottom-flip.html" %}
+
 {% set previousChapterTitle = "Update your details in your UKVI account" %}
 {% set previousChapterPath = "../update-ukvi-account" %}
 
 {% set guideLinks = [
-  { text: "What an eVisa is", href: "../evisa/guide-nav-middle-blue-caption-bottom-flip.html" },
-  { text: "Set up a UKVI account to access your eVisa", href: "../set-up-ukvi-account/guide-nav-middle-blue-caption-bottom-flip.html" },
-  { text: "Get an eVisa if you have settlement in the UK", href: "../get-evisa-settlement-uk/guide-nav-middle-blue-caption-bottom-flip.html" },
-  { text: "View your eVisa and get a share code to prove your immigration status", href: "../view-your-evisa/guide-nav-middle-blue-caption-bottom-flip.html"},
-  { text: "Travel with your eVisa", href: "../travel-with-evisa/guide-nav-middle-blue-caption-bottom-flip.html"  },
- { text: "Update your details in your UKVI account", href: "../update-ukvi-account/guide-nav-middle-blue-caption-bottom-flip.html" },
-  { text: "Report an error with your eVisa", href: "../report-error-evisa/guide-nav-middle-blue-caption-bottom-flip.html", current: true }
+  { text: "What an eVisa is", href: "../evisa" ~ layoutPath },
+  { text: "Set up a UKVI account to access your eVisa", href: "../set-up-ukvi-account" ~ layoutPath },
+  { text: "Get an eVisa if you have settlement in the UK", href: "../get-evisa-settlement-uk" ~ layoutPath },
+  { text: "View your eVisa and get a share code to prove your immigration status", href: "../view-your-evisa" ~ layoutPath},
+  { text: "Travel with your eVisa", href: "../travel-with-evisa" ~ layoutPath  },
+ { text: "Update your details in your UKVI account", href: "../update-ukvi-account" ~ layoutPath },
+  { text: "Report an error with your eVisa", href: "../report-error-evisa" ~ layoutPath, current: true }
 ] %}
 
 {% block pageTitle %}
