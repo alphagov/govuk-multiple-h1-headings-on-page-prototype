@@ -1,13 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set chapterTitle = "What an eVisa is" %}
-{% set guideTitle = "eVisas: access and use your online immigration status" %}
-
 {% set layoutPath = "/guide-nav-middle-blue-caption-bottom-flip.html" %}
-
-{% set nextChapterTitle = "Set up a UKVI account to access your eVisa" %}
-{% set nextChapterPath = "../set-up-ukvi-account" %}
-
 
 {% set guideLinks = [
   { text: "What an eVisa is", href: "../evisa" ~ layoutPath , current: true },
@@ -20,7 +13,7 @@
 ] %}
 
 {% block pageTitle %}
-  {{ guideTitle }}: {{ chapterTitle }} - GOV.UK
+  {{ data.evisa.guideTitle }}: {{ data.evisa.chapterTitle }} - GOV.UK
 {% endblock %}
 
 {# Blank header with no service name for this page #}
@@ -65,11 +58,11 @@
           {# Chapter heading #}
           <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
              
-             {{ guideTitle }}
+             {{ data.evisa.guideTitle }}
             <span class="govuk-caption-xl govuk-chapter-title govuk-!-margin-top-6">
               <span class="govuk-visually-hidden"> - </span>
               <!-- Guide title -->
-              {{ chapterTitle }}
+              {{ data.evisa.chapterTitle }}
               </span>
             </span>
           </h1>
@@ -90,7 +83,7 @@
                 <span class="govuk-visually-hidden">
                 Pages in
                 </span>
-                {{ guideTitle }}
+                {{ data.evisa.guideTitle }}
               </h2>
               
             </header>

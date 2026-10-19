@@ -1,13 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set chapterTitle = "What an eVisa is" %}
-{% set guideTitle = "eVisas: access and use your online immigration status" %}
-
 {% set layoutPath = "/guide-nav-middle-caption-bottom.html" %}
-
-{% set nextChapterTitle = "Set up a UKVI account to access your eVisa" %}
-{% set nextChapterPath = "../set-up-ukvi-account" %}
-
 
 {% set guideLinks = [
   { text: "What an eVisa is", href: "../evisa" ~ layoutPath , current: true },
@@ -20,7 +13,7 @@
 ] %}
 
 {% block pageTitle %}
-  {{ guideTitle }}: {{ chapterTitle }} - GOV.UK
+  {{ data.evisa.guideTitle }}: {{ data.evisa.chapterTitle }} - GOV.UK
 {% endblock %}
 
 {# Blank header with no service name for this page #}
@@ -58,19 +51,19 @@
     <h1 class="govuk-heading-xl">
       <span role="text">
         <!-- Chapter title -->
-        {{ chapterTitle }}
+        {{ data.evisa.chapterTitle }}
         <span class="govuk-caption-xl govuk-!-margin-top-3">
           <span class="govuk-visually-hidden"> - </span>
           <!-- Guide title -->
-            {{ guideTitle }}
+            {{ data.evisa.guideTitle }}
         </span>
       </span>
     </h1>
 
       {# Mobile Service Navigation (Dropdown) #}
       {{ govukServiceNavigation({
-        menuButtonText: guideTitle,
-        menuButtonLabel: "Pages in " + guideTitle,
+        menuButtonText: data.evisa.guideTitle,
+        menuButtonLabel: "Pages in " + data.evisa.guideTitle,
         serviceUrl: "#",
         navigation: guideLinks
       }) }}
@@ -83,7 +76,7 @@
             <span class="govuk-visually-hidden">
             Pages in
             </span>
-            {{ guideTitle }}
+            {{ data.evisa.guideTitle }}
           </h2>
           
         </header>
