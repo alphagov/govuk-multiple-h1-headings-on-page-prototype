@@ -2,16 +2,6 @@
 
 {% set layoutPath = "/guide-nav-middle-blue-caption-bottom-flip.html" %}
 
-{% set guideLinks = [
-  { text: "What an eVisa is", href: "../evisa" ~ layoutPath , current: true },
-  { text: "Set up a UKVI account to access your eVisa", href: "../set-up-ukvi-account" ~ layoutPath },
-  { text: "Get an eVisa if you have settlement in the UK", href: "../get-evisa-settlement-uk" ~ layoutPath },
-  { text: "View your eVisa and get a share code to prove your immigration status", href: "../view-your-evisa" ~ layoutPath },
-  { text: "Travel with your eVisa", href: "../travel-with-evisa" ~ layoutPath },
-  { text: "Update your details in your UKVI account", href: "../update-ukvi-account" ~ layoutPath },
-  { text: "Report an error with your eVisa", href: "../report-error-evisa" ~ layoutPath }
-] %}
-
 {% block pageTitle %}
   {{ data.evisa.guideTitle }}: {{ data.evisa.chapterTitle }} - GOV.UK
 {% endblock %}
@@ -88,10 +78,10 @@
               
             </header>
             <ul class="app-subnav__section">
-                {% for item in guideLinks %}
+                {% for item in data.evisa.guideLinks %}
                 <li class="app-subnav__section-item {% if item.current %}app-subnav__section-item--current{% endif %}">
                   <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" 
-                    href="{{ item.href }}" 
+                    href="{{ item.href | replace('__layoutPath__', layoutPath) }}" 
                     {% if item.current %}aria-current="page"{% endif %}>
                     {{ item.text }}
                   </a>
