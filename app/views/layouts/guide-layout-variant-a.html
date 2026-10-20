@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{% from "includes/guide-subnav.njk" import renderGuideSubnav  %}
+{% from "includes/guide-related.njk" import renderRelatedContent, renderExploreTopics  %}
+
+{% block pageTitle %}
+    {{ currentGuide.title }}: {{ currentPageTitle }} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+    {% if currentGuide.breadcrumbs and currentGuide.breadcrumbs.length %}
+        {{ govukBreadcrumbs({
+            items: currentGuide.breadcrumbs
+        })}}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row app-page-with-service-nav">
+    <div class="govuk-grid-column-two-thirds">
+        {# Combined heading #}
+
+         <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-xl">
+            <span class="govuk-visually-hidden"> - </span>
+            <!-- Guide title -->
+            {{ currentGuide.title }}
+          </span>
+          <span role="text">
+            <!-- Chapter title -->
+            {{ currentPageTitle }} VARIANT A
+        </span>
+      </h1>
+
+      {# Render mobile navigation #}
+
+      {# Render subnav currentPageSlug #}
+
+      {{ renderGuideSubnav(currentGuide, currentPageSlug, guideId, activeLayout) }} 
+    </div>
+</div>
+
+{# Individual page body content #}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% block guideBody %} {% endblock %}
+
+      {# Render previous / next pagination #}
+
+      {% if pagination.next or pagination.previous %}
+
+        {{ govukPagination ({
+            next: pagination.next,
+            previous: pagination.previous
+        }) }}
+     {% endif %}
+
+    <p class="govuk-body govuk-!-margin-bottom-8">
+        <a class="govuk-link" href="#">View a printable version of the whole guide</a>
+    </p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        {# Shared related content sidebar #}
+        {{ renderRelatedContent(currentGuide.related) }}
+    </div>
+</div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {# Shared explore the topic secion #}
+        {{ renderExploreTopics(currentGuide.related) }}
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

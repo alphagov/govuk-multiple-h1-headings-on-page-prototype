@@ -1,0 +1,67 @@
+{% macro renderRelatedContent(related) %}
+
+    {% if related and (related.links.length or related.collections.length) %}
+
+        <aside class="govuk-prototype-kit-common-templates-related-items">
+
+            {# Related Content links #}
+            {% if related.links and related.links.length %}
+
+                <h2 class="govuk-heading-s" id="related-content">
+                    Related content
+                </h2>
+                <nav role="navigation" aria-labelledby="related-content">
+                    <ul class="govuk-list govuk-!-font-size-16">
+                        {% for item in related.links %}
+                            <li>
+                                <a href="{{ item.href }}">
+                                    {{ item.text }}
+                                </a>
+                            </li>
+                        {% endfor %} 
+                    </ul>
+                </nav>
+            {% endif %}
+
+            {# Collection links #}
+            {% if related.collections and related.collections.length %}
+            <nav role="navigation" aria-labelledby="related-collections">
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                <h3 id="related-collections" class="govuk-body govuk-!-font-size-16">
+                    Collection
+                </h3>
+                <ul class="govuk-list govuk-!-font-size-16 govuk-!-font-weight-bold">
+                    {% for item in related.collections %}
+                        <li>
+                            <a href="{{ item.href }}">
+                                {{ item.text }}
+                            </a>
+                        </li>
+                    {% endfor %} 
+                </ul>
+            </nav>
+        {% endif %}
+        </aside>
+    {% endif %}
+{% endmacro %}
+
+{% macro renderExploreTopics(related) %}
+
+    {% if related and related.topics and related.topics.length %}
+
+        <nav class="related-navigation-topic" aria-labelledby="related-nav-topics">
+            <h2 class="govuk-heading-s govuk-!-margin-top-3" id="related-nav-topics">
+                Explore the topic
+            </h2>
+            <ul class="govuk-list govuk-!-font-size-16 govuk-!-font-weight-bold govuk-list--spaced">
+                {% for topic in related.topics %}
+                    <li>
+                        <a href="{{ topic.href }}">
+                            {{ topic.text }}            
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
+{% endmacro %}
