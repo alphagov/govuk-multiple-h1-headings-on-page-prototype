@@ -1,0 +1,11 @@
+{% macro renderStepByStepHeader(stepByStep) %}
+    {% if stepByStep %}
+        <div class="gem-c-step-nav-header" title="{{ stepByStep.title }}">
+            <strong class="gem-c-step-nav-header__part-of">Part of</strong>
+            <a href="{{ stepByStep.href }}" class="gem-c-step-nav-header__title govuk-link gem-print-force-link-styles">
+                {{ stepByStep.title }}
+            </a>
+        </div>
+    {% endif %}
+
+{% endmacro %}

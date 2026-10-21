@@ -3,8 +3,9 @@
 {# Default template with combined heading: the guide title as xl caption on top and chapter title as xl heading 
 includes mobile navigation #}
 
-{% from "govuk/components/pagination/macro.njk" import govukPagination %}
-
+{# {% from "govuk/components/pagination/macro.njk" import govukPagination %} #}
+{% from "includes/guide-step-by-step-header.njk" import renderStepByStepHeader %}
+{% from "includes/guide-step-by-step-nav.njk" import renderStepNavSidebar %}
 {% from "includes/guide-subnav.njk" import renderGuideSubnav  %}
 {% from "includes/guide-service-nav.njk" import renderGuideServiceNav  %}
 {% from "includes/guide-pagination.njk" import renderGuidePagination %}
@@ -15,7 +16,9 @@ includes mobile navigation #}
 {% endblock %}
 
 {% block beforeContent %}
-    {% if currentGuide.breadcrumbs and currentGuide.breadcrumbs.length %}
+    {% if currentGuide.stepByStep %}
+        {{ renderStepByStepHeader(currentGuide.stepByStep) }}
+    {% elif currentGuide.breadcrumbs and currentGuide.breadcrumbs.length %}
         {{ govukBreadcrumbs({
             items: currentGuide.breadcrumbs
         })}}
@@ -68,8 +71,12 @@ includes mobile navigation #}
     </div>
 
     <div class="govuk-grid-column-one-third">
-        {# Shared related content sidebar #}
-        {{ renderRelatedContent(currentGuide.related) }}
+        {# Conditional Sidebar: Render StepNav if present, otherwise render standard Related links #}
+            {% if currentGuide.stepNav %}
+                {{ renderStepNavSidebar(currentGuide.stepNav) }}
+            {% else %}
+                {{ renderRelatedSidebar(currentGuide.related) }}
+            {% endif %}
     </div>
 </div>
 

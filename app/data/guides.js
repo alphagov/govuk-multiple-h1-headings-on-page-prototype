@@ -147,15 +147,89 @@ module.exports = {
     },
     "student-finance": {
         title: "Student finance for undergraduates",
-        part_of: "Get undergraduate student finance: step by step",
+        stepByStep: {
+            title: "Get undergraduate student finance: step by step",
+            href: "#"
+        },
+        stepNav: {
+            title: "Get undergraduate student finance: step by step",
+            steps: [
+              {
+                number: 1,
+                title: "Check if you're eligible",
+                logic: "and",
+                links: [
+                  {
+                    text: "Find out if you're eligible for student finance",
+                    href: "#"
+                  }
+                ]
+              },
+              {
+                number: 2,
+                title: "Find out how much you could get",
+                logic: "and",
+                links: [
+                  {
+                    text: "Use the student finance calculator to estimate your student loan",
+                    href: "#"
+                  }
+                ]
+              },
+              {
+                number: 3,
+                title: "Check extra help available",
+                logic: "and",
+                links: [
+                  {
+                    text: "Extra help for students with children or dependent adults",
+                    href: "#"
+                  },
+                  {
+                    text: "Disabled Students' Allowance (DSA)",
+                    href: "#"
+                  }
+                ]
+              },
+              {
+                number: 4,
+                title: "Apply",
+                logic: "and",
+                links: [
+                  {
+                    text: "Apply online for student finance",
+                    href: "#"
+                  },
+                  {
+                    text: "Log in to your student finance account",
+                    href: "#"
+                  }
+                ]
+              },
+              {
+                number: 5,
+                title: "Manage your student finance",
+                links: [
+                  {
+                    text: "Update your details or change your course",
+                    href: "#"
+                  },
+                  {
+                    text: "Repaying your student loan",
+                    href: "#"
+                  }
+                ]
+              }
+            ]
+          },
         pages: [
             { slug: "index", text: "Overview" },
-            { slug: "second-chapter", text: "Eligibility"},
+            { slug: "", text: "Eligibility"},
             { slug: "", text: "New full-time students"},
             { slug: "", text: "Continuing full-time students"},
-            { slug: "second-chapter", text: "Part-time students"},
+            { slug: "", text: "Part-time students"},
             { slug: "", text: "Extra financial help"},
-            { slug: "second-chapter", text: "Apply"}
+            { slug: "", text: "Apply"}
         ]
     },
     "guide-name": {
@@ -181,7 +255,7 @@ module.exports = {
         },
         pages: [
             { slug: "index", text: "First chapter title" },
-            { slug: "second-chapter", text: "Second chapter title"},
+            { slug: "", text: "Second chapter title"},
             { slug: "", text: "What you'll get"}
         ]
     }
