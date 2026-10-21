@@ -71,7 +71,7 @@ includes mobile navigation #}
     </div>
 
     <div class="govuk-grid-column-one-third">
-        {# Conditional Sidebar: Render StepNav if present, otherwise render standard Related links #}
+        {# Check stepNav property on currentGuide #}
             {% if currentGuide.stepNav %}
                 {{ renderStepNavSidebar(currentGuide.stepNav) }}
             {% else %}

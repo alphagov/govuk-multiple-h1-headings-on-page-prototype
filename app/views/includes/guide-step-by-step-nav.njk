@@ -1,6 +1,6 @@
 {% macro renderStepNavSidebar(stepNav) %}
-  {% if stepNav %}
-    <div class="gem-c-step-nav js-hidden gem-c-step-nav--active" data-module="gem-step-nav" id="step-by-step-navigation">
+  {% if stepNav and stepNav.steps %}
+    <div class="gem-c-step-nav gem-c-step-nav--active" data-module="gem-step-nav" id="step-by-step-navigation">
       <ol class="gem-c-step-nav__steps">
         {% for step in stepNav.steps %}
           <li class="gem-c-step-nav__step" id="step-{{ step.number }}">
