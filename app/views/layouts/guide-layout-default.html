@@ -7,6 +7,7 @@ includes mobile navigation #}
 
 {% from "includes/guide-subnav.njk" import renderGuideSubnav  %}
 {% from "includes/guide-service-nav.njk" import renderGuideServiceNav  %}
+{% from "includes/guide-pagination.njk" import renderGuidePagination %}
 {% from "includes/guide-related.njk" import renderRelatedContent, renderExploreTopics  %}
 
 {% block pageTitle %}
@@ -53,21 +54,16 @@ includes mobile navigation #}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {% block guideBody %} {% endblock %}
+        {% block guideBody %} {% endblock %}
 
-      {# Render previous / next pagination #}
+        {# Render previous / next pagination #}
 
-      {% if pagination.next or pagination.previous %}
+        {{ renderGuidePagination(pagination) }}
 
-        {{ govukPagination ({
-            next: pagination.next,
-            previous: pagination.previous
-        }) }}
-     {% endif %}
 
-    <p class="govuk-body govuk-!-margin-bottom-8">
-        <a class="govuk-link" href="#">View a printable version of the whole guide</a>
-    </p>
+        <p class="govuk-body govuk-!-margin-bottom-8">
+            <a class="govuk-link" href="#">View a printable version of the whole guide</a>
+        </p>
 
     </div>
 
@@ -87,8 +83,4 @@ includes mobile navigation #}
     </div>
   </div>
 
-{% endblock %}
-
-{% block scripts %}
-    {{ super() }}
 {% endblock %}
