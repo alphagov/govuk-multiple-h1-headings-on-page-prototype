@@ -1,5 +1,5 @@
 module.exports = {
-    evisa: {
+    "evisa": {
         title: "eVisas: access and use your online immigration status",
         breadcrumbs: [
             { text: "Home", href: '#' },
@@ -30,6 +30,159 @@ module.exports = {
             { slug: "update-ukvi-account", text: "Update your details in your UKVI account"},
             { slug: "report-error-evisa", text: "Report an error with your eVisa"}
 
+        ]
+    },
+    "universal-credit": {
+        title: "Universal Credit",
+        breadcrumbs: [
+            { text: "Home", href: '#' },
+            { text: "Benefits", href: '#' },
+            { text: "Benefits and financial support if you're on a low income", href: '#' }
+        ],
+        related: {
+            links: [
+                { text: "Sign in to your Universal Credit account", href: '#' },
+                { text: "Benefits calculators", href: '#' },
+                { text: "Housing Benefit", href: '#' },
+                { text: "Self-employment and Universal Credit", href: '#' },
+                { text: "Sign in to a service", href: '#' }
+            ],
+            collections: [
+                { text: "Universal Credit: detailed information for claimants", href: '#' },
+                { text: "Universal Credit: information for employers", href: '#' },
+                { text: "Universal Credit: for claimants who receive a Migration Notice letter", href: '#' },
+                { text: "Universal Credit: information for stakeholders and partners", href: '#' },
+                { text: "Universal Credit: information for landlords", href: '#' }
+            ],
+            topics: [
+                { text: "Benefits and financial support if you're caring for someone", href: '#' },
+                { text: "Benefits and financial support if you're looking for work", href: '#' },
+                { text: "Benefits and financial support if you're on a low income", href: '#' },
+                { text: "Benefits and financial support if you're temporarily unable to work", href: '#' },
+                { text: "Benefits and financial support when someone dies", href: '#' },
+                { text: "Benefits and financial help", href: '#' },
+                { text: "Caring for someone", href: '#' },
+                { text: "Finding a job", href: '#' }
+            ]
+        },
+        pages: [
+            { slug: "index", text: "What Universal Credit is" },
+            { slug: "eligibility", text: "Eligibility"},
+            { slug: "", text: "What you'll get"},
+            { slug: "", text: "How your wages affect your payments"},
+            { slug: "", text: "How you're paid"},
+            { slug: "", text: "How to claim"},
+            { slug: "", text: "Your claimant commitment"},
+            { slug: "", text: "Get an advance or other financial support"},
+            { slug: "", text: "Report a change of circumstances"},
+            { slug: "", text: "Contact Universal Credit"},
+
+        ]
+    },
+    "right-to-rent": {
+        title: "Prove your right to rent in England",
+        breadcrumbs: [
+            { text: "Home", href: '#' },
+            { text: "Housing and local services", href: '#' },
+            { text: "Renting a property", href: '#' }
+        ],
+        related: {
+            links: [
+                { text: "Private renting", href: '#' }
+            ],
+            topics: [
+                { text: "Living in the UK, government and democracy", href: '#' },
+                { text: "Renting a property", href: '#' },
+                { text: "What you need to do", href: '#' }
+            ]
+        },
+        pages: [
+            { slug: "index", text: "Overview" },
+            { slug: "", text: "Get a share code online"},
+            { slug: "", text: "Using immigration documents"},
+            { slug: "", text: "Using other documents"}
+        ]
+    },
+    "self-assessment-tax": {
+        title: "Self Assessment tax returns",
+        breadcrumbs: [
+            { text: "Home", href: '#' },
+            { text: "Money and tax", href: '#' },
+            { text: "Income Tax", href: '#' }
+        ],
+        related: {
+            links: [
+                { text: "File your Self Assessment tax return online", href: '#' },
+                { text: "Understand your Self Assessment tax bill", href: '#' },
+                { text: "Pay your Self Assessment tax bill", href: '#' },
+                { text: "Get your SA302 tax calculation", href: '#' }
+            ],
+            collections: [
+                { text: "Self Assessment: detailed information", href: '#' },
+                { text: "Help setting up and running a small business", href: '#' },
+                { text: "Repayments and refunds from HMRC: detailed information", href: '#' },
+                { text: "Income Tax: detailed information", href: '#' },
+                { text: "Self-employment: detailed information", href: '#' }
+            ],
+            topics: [
+                { text: "Business tax and returns", href: '#' },
+                { text: "Income Tax", href: '#' },
+                { text: "Self Assessment", href: '#' },
+                { text: "Your pay, tax and the National Minimum Wage", href: '#' }
+            ]
+        },
+        pages: [
+            { slug: "index", text: "Overview" },
+            { slug: "", text: "Who must send a tax return"},
+            { slug: "", text: "Registering for Self Assessment"},
+            { slug: "", text: "Sending a return"},
+            { slug: "", text: "If you no longer need to send a tax return"},
+            { slug: "", text: "Deadlines"},
+            { slug: "", text: "Penalties"},
+            { slug: "", text: "If you need to change your return"},
+            { slug: "", text: "Claiming a tax refund"},
+            { slug: "", text: "How to get help"},
+            { slug: "", text: "Returns for someone who has died"}
+        ]
+    },
+    "student-finance": {
+        title: "Student finance for undergraduates",
+        part_of: "Get undergraduate student finance: step by step",
+        pages: [
+            { slug: "index", text: "Overview" },
+            { slug: "second-chapter", text: "Eligibility"},
+            { slug: "", text: "New full-time students"},
+            { slug: "", text: "Continuing full-time students"},
+            { slug: "second-chapter", text: "Part-time students"},
+            { slug: "", text: "Extra financial help"},
+            { slug: "second-chapter", text: "Apply"}
+        ]
+    },
+    "guide-name": {
+        title: "Guide Title",
+        breadcrumbs: [
+            { text: "Home", href: '#' },
+            { text: "1", href: '#' },
+            { text: "2", href: '#' }
+        ],
+        related: {
+            links: [
+                { text: "Link name", href: '#' },
+                { text: "Link name", href: '#' }
+            ],
+            collections: [
+                { text: "Link name", href: '#' },
+                { text: "Link name", href: '#' }
+            ],
+            topics: [
+                { text: "Link name", href: '#' },
+                { text: "Link name", href: '#' }
+            ]
+        },
+        pages: [
+            { slug: "index", text: "First chapter title" },
+            { slug: "second-chapter", text: "Second chapter title"},
+            { slug: "", text: "What you'll get"}
         ]
     }
 }
