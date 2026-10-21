@@ -1,8 +1,12 @@
 {% extends "layouts/main.html" %}
 
+{# Default template with combined heading: the guide title as xl caption on top and chapter title as xl heading 
+includes mobile navigation #}
+
 {% from "govuk/components/pagination/macro.njk" import govukPagination %}
 
 {% from "includes/guide-subnav.njk" import renderGuideSubnav  %}
+{% from "includes/guide-service-nav.njk" import renderGuideServiceNav  %}
 {% from "includes/guide-related.njk" import renderRelatedContent, renderExploreTopics  %}
 
 {% block pageTitle %}
@@ -37,7 +41,9 @@
 
       {# Render mobile navigation #}
 
-      {# Render subnav currentPageSlug #}
+      {{ renderGuideServiceNav(currentGuide, currentPageSlug, guideId, activeLayout) }}
+
+      {# Render desktop navigation #}
 
       {{ renderGuideSubnav(currentGuide, currentPageSlug, guideId, activeLayout) }} 
     </div>
@@ -81,4 +87,8 @@
     </div>
   </div>
 
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
 {% endblock %}
