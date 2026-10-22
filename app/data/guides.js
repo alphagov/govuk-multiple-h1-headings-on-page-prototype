@@ -232,6 +232,35 @@ module.exports = {
             { slug: "", text: "Apply"}
         ]
     },
+    "travel-advice-france": {
+        title: "France",
+        type: "travelAdvice",
+        breadcrumbs: [
+            { text: "Home", href: '#' },
+            { text: "Passports, travel and living abroad", href: '#' },
+            { text: "Travel abroad", href: '#' },
+            { text: "Foreign travel advice", href: '#' }
+        ],
+        related: {
+            links: [
+                { text: "About Foreign, Commonwealth & Development Office travel advice", href: '#' },
+                { text: "Travel or do business in Europe: Brexit guidance", href: '#' },
+                { text: "Support for British nationals abroad", href: '#' },
+                { text: "Foreign travel checklist", href: '#' },
+                { text: "UK help and services in France", href: '#' }
+            ],
+            topics: [
+                { text: "Living in France ", href: '#' },
+                { text: "Travelling to France", href: '#' }
+            ]
+        },
+        pages: [
+            { slug: "index", text: "Warnings and insurance" },
+            { slug: "", text: "Safety and security"},
+            { slug: "", text: "Health"},
+            { slug: "", text: "Getting help"}
+        ]
+    },
     "guide-name": {
         title: "Guide Title",
         breadcrumbs: [
