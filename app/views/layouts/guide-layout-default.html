@@ -75,7 +75,7 @@ includes mobile navigation #}
             {% if currentGuide.stepNav %}
                 {% include "../includes/_step-by-step.html" %}
             {% else %}
-                {{ renderRelatedSidebar(currentGuide.related) }}
+                {{ renderRelatedContent(currentGuide.related) }}
             {% endif %}
     </div>
 </div>

@@ -233,8 +233,8 @@ module.exports = {
         ]
     },
     "travel-advice-france": {
-        title: "France",
-        type: "travelAdvice",
+        title: "France travel advice",
+        isTravelAdvice: true,
         breadcrumbs: [
             { text: "Home", href: '#' },
             { text: "Passports, travel and living abroad", href: '#' },
