@@ -1,0 +1,30 @@
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{% macro renderGuideServiceNav(guide, currentPageSlug, guideId, activeLayout) %}
+
+    {% set layoutQuery = "?layout=" ~ activeLayout if activeLayout else ""%}
+    {% set navItems = [] %}
+
+    {# Map guide.pages to the structure in govukServiceNavigation #}
+
+    {% for page in guide.pages %}
+        {% set isCurrent = (page.slug == currentPageSlug) %}
+        {% set pageHref = "/guides/" ~ guideId ~ "/" ~ page.slug ~ layoutQuery %}
+
+        {% set navItems = (navItems.push({
+            text: page.text,
+            href: pageHref,
+            active: isCurrent
+        }), navItems) %}
+
+    {% endfor %}
+
+    {{ govukServiceNavigation({
+        menuButtonText: guide.title,
+        menuButtonLabel: "Pages in " ~ guide.title,
+        navigationId: "navigation",
+        serviceUrl: "/guides/" ~ guideId ~ "/index" ~ layoutQuery,
+        navigation: navItems
+    }) }}
+
+    {% endmacro %}
