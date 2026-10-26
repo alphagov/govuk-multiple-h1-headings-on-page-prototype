@@ -3,7 +3,7 @@
 {# Default template with combined heading: the guide title as xl caption on top and chapter title as xl heading 
 includes mobile navigation #}
 
-{# {% from "govuk/components/pagination/macro.njk" import govukPagination %} #}
+
 {% from "includes/guide-step-by-step-header.njk" import renderStepByStepHeader %}
 {% from "includes/guide-step-by-step-nav.njk" import renderStepNavSidebar %}
 {% from "includes/guide-subnav.njk" import renderGuideSubnav  %}
@@ -83,7 +83,7 @@ includes mobile navigation #}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        {# Shared explore the topic secion #}
+        {# Shared explore the topic section #}
         {{ renderExploreTopics(currentGuide.related) }}
         
       </div>
