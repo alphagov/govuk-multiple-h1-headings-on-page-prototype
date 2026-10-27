@@ -32,16 +32,17 @@ includes mobile navigation #}
         {# Combined heading #}
 
          <h1 class="govuk-heading-xl">
-          <span class="govuk-caption-xl">
-            <span class="govuk-visually-hidden"> - </span>
-            <!-- Guide title -->
-            {{ currentGuide.title }}
-          </span>
-          <span role="text">
-            <!-- Chapter title -->
-            {{ currentPageTitle }}
-        </span>
-      </h1>
+            <span role="text">
+                <span class="govuk-caption-xl">
+                    <!-- Guide title -->
+                    {{ currentGuide.title }}
+                </span>
+                <span class="govuk-visually-hidden"> - </span>
+            
+                <!-- Chapter title -->
+                {{ currentPageTitle }}
+            </span>
+        </h1>
 
       {# Render mobile navigation #}
 

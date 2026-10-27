@@ -14,14 +14,6 @@ includes mobile navigation #}
     {{ currentGuide.title }}: {{ currentPageTitle }} - GOV.UK
 {% endblock %}
 
-{# {% block beforeContent %}
-    {% if currentGuide.breadcrumbs and currentGuide.breadcrumbs.length %}
-        {{ govukBreadcrumbs({
-            items: currentGuide.breadcrumbs
-        })}}
-    {% endif %}
-{% endblock %} #}
-
 {% block container %}
 
 <div class="breadcrumb-wrapper">
@@ -49,15 +41,16 @@ includes mobile navigation #}
 
                 {# Combined heading #}
                 <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
-                    <!-- Guide title -->
-                    {{ currentGuide.title }}
+                    <span role="text">                 
+                        <!-- Guide title -->
+                        {{ currentGuide.title }}
+                        <span class="govuk-visually-hidden"> - </span>
 
-                <span role="text" class="govuk-caption-xl govuk-chapter-title govuk-!-margin-top-6">
-                    <span class="govuk-visually-hidden"> - </span>
-
-                    <!-- Chapter title -->
-                    {{ currentPageTitle }}
-                </span>
+                        <span class="govuk-caption-xl govuk-chapter-title govuk-!-margin-top-6">
+                            <!-- Chapter title -->
+                            {{ currentPageTitle }}
+                        </span>
+                    </span>
                 </h1>
             </div>
         </div>
