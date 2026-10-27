@@ -28,11 +28,7 @@ includes mobile navigation #}
 {% block content %}
 
 <div class="govuk-grid-row app-page-with-service-nav">
-    <div class="govuk-grid-column-one-third ">
-
-        {# Render desktop navigation #}
-        {{ renderGuideSubnavHeadingVisible(currentGuide, currentPageSlug, guideId, activeLayout) }} 
-    </div>
+    
     <div class="govuk-grid-column-two-thirds">
         {# Combined heading #}
 
@@ -52,6 +48,16 @@ includes mobile navigation #}
 
       {{ renderGuideServiceNav(currentGuide, currentPageSlug, guideId, activeLayout) }}
 
+    </div>
+</div>
+
+<div class="govuk-grid-row app-page-with-service-nav">
+    <div class="govuk-grid-column-one-third ">
+
+        {# Render desktop navigation #}
+        {{ renderGuideSubnavHeadingVisible(currentGuide, currentPageSlug, guideId, activeLayout) }} 
+    </div>
+    <div class="govuk-grid-column-two-thirds">
       {# Individual page body content #}
 
       {% block guideBody %} {% endblock %}
@@ -74,8 +80,7 @@ includes mobile navigation #}
 
         {# Shared explore the topic section #}
         {{ renderExploreTopics(currentGuide.related) }}
-
-      
+ 
     </div>
 </div>
 
