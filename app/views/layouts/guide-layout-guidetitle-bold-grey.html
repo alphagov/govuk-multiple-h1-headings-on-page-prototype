@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{# Default template with combined heading: the guide title as xl caption on top and chapter title as xl heading 
+{# Heading with guide title as a bold caption under the chapter title
 includes mobile navigation #}
 
 
@@ -35,8 +35,8 @@ includes mobile navigation #}
             <span role="text">
                 <!-- Chapter title -->
                 {{ currentPageTitle }}
-                <span class="govuk-guide-title heading-grey">
                 <span class="govuk-visually-hidden"> - </span>
+                <span class="govuk-guide-title heading-grey">                 
                 <!-- Guide title -->
                 {{ currentGuide.title }}
                 </span>
