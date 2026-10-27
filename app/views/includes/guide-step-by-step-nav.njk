@@ -1,0 +1,32 @@
+{% macro renderStepNavSidebar(stepNav) %}
+  {% if stepNav and stepNav.steps %}
+    <div class="gem-c-step-nav gem-c-step-nav--active" data-module="gem-step-nav" id="step-by-step-navigation">
+      <ol class="gem-c-step-nav__steps">
+        {% for step in stepNav.steps %}
+          <li class="gem-c-step-nav__step" id="step-{{ step.number }}">
+            <div class="gem-c-step-nav__header" data-step-title>
+              <h3 class="gem-c-step-nav__title">
+                <span class="gem-c-step-nav__circle gem-c-step-nav__circle--number">
+                  <span class="gem-c-step-nav__circle-inner">
+                    <span class="gem-c-step-nav__circle-number">{{ step.number }}</span>
+                  </span>
+                </span>
+                <span class="gem-c-step-nav__title-text">{{ step.title }}</span>
+              </h3>
+            </div>
+
+            <div class="gem-c-step-nav__panel" id="step-panel-{{ step.number }}">
+              <ul class="gem-c-step-nav__links" data-length="{{ step.links.length }}">
+                {% for link in step.links %}
+                  <li class="gem-c-step-nav__link-item">
+                    <a class="govuk-link" href="{{ link.href }}">{{ link.text }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  {% endif %}
+{% endmacro %}

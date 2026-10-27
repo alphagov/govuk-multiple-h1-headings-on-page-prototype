@@ -1,0 +1,174 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home - GOV.UK Headings prototype - archived examples" %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back to homepage",
+        href: "/index.html"
+        }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Archived examples
+    </h1>
+
+    <p class="govuk-body-l">Listing designs we explored but didn't accept</p>
+
+    <h2 class="govuk-heading-l">Navigation heading visible</h2>
+
+    {% call govukInsetText() %}
+        In the combined H1 the chapter title is an xl heading and guide title is visually hidden. Instead we make the navigation heading H2 visible.
+    {% endcall %}
+
+        <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=nav-heading-grey">View your eVisa and get a share code to prove your immigration status</a></p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=nav-heading-grey">Universal Credit</a> - shorter titles</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=nav-heading-grey">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=nav-heading-grey">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=nav-heading-grey">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=nav-heading-grey">France travel advice</a></p>
+
+
+    <h2 class="govuk-heading-l">Heading with guide title as caption below the chapter title</h2>
+
+    {% call govukInsetText() %}
+        In the combined H1 the chapter title is an xl heading and guide title is an xl caption below.
+    {% endcall %}
+
+        <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=guidetitle-caption-below">View your eVisa and get a share code to prove your immigration status</a></p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=guidetitle-caption-below">Universal Credit</a> - shorter titles</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=guidetitle-caption-below">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=guidetitle-caption-below">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=guidetitle-caption-below">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+        <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=guidetitle-caption-below">France travel advice</a></p>
+
+
+    <h2 class="govuk-heading-l">Heading with guide title as a bold caption under the chapter title</h2>
+
+    {% call govukInsetText() %}
+        In the combined H1 the chapter title is an xl heading and guide title is a bold grey xl caption below.
+    {% endcall %}
+
+    <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=guidetitle-bold-grey">View your eVisa and get a share code to prove your immigration status</a></p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=guidetitle-bold-grey">Universal Credit</a> - shorter titles</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=guidetitle-bold-grey">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=guidetitle-bold-grey">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=guidetitle-bold-grey">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=guidetitle-bold-grey">France travel advice</a></p>
+        
+
+    <h2 class="govuk-heading-l">Dark blue subheading</h2>
+
+    {% call govukInsetText() %}
+        In the combined H1 the chapter title is an xl heading and guide title is a bold dark blue below.
+    {% endcall %}
+
+    <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=darkblue-subheading">View your eVisa and get a share code to prove your immigration status</a></p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=darkblue-subheading">Universal Credit</a> - shorter titles</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=darkblue-subheading">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=darkblue-subheading">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=darkblue-subheading">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=darkblue-subheading">France travel advice</a></p>
+
+     {% call govukInsetText() %}
+        Variation of the above. In the combined H1 the chapter title is an xl heading and guide title is a bold dark blue below and a blue border between them.
+    {% endcall %}
+
+
+    <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=darkblue-subheading-border">View your eVisa and get a share code to prove your immigration status</a></p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=darkblue-subheading-border">Universal Credit</a> - shorter titles</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=darkblue-subheading-border">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=darkblue-subheading-border">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=darkblue-subheading-border">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=darkblue-subheading-border">France travel advice</a></p>
+
+    {# <h2 class="govuk-heading-l">Navigation wrapped</h2> #}
+
+    {# <p class="govuk-body"><a class="govuk-link" href="/pages/archived/heading-toggle-nav.html">Heading with chapter name in toggle navigation</a> in the View your eVisa and get a share code to prove your immigration status guide</p> Decided is not worth re-creating #}
+
+    <h2 class="govuk-heading-l">Navigation on the right</h2>
+
+     {% call govukInsetText() %}
+        Navigation in the right sidebar above the related items or the step by step nav. The navigation heading H2 is visible.
+    {% endcall %}
+
+    <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=nav-right">View your eVisa and get a share code to prove your immigration status</a></p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=nav-right">Universal Credit</a> - shorter titles</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=nav-right">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=nav-right">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=nav-right">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=nav-right">France travel advice</a></p>
+
+    <h2 class="govuk-heading-l">Navigation on the left</h2>
+
+    {% call govukInsetText() %}
+        Navigation on the left. Top of the navigation is aligned with the guide's H1 which is similar with GOV.UK Design System navigation structure. This however means that related content links or the step by step nav is moved down under the chapter content and pagination.
+    {% endcall %}
+
+    <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=nav-left-top">View your eVisa and get a share code to prove your immigration status</a></p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=nav-left-top">Universal Credit</a> - shorter titles</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=nav-left-top">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=nav-left-top">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=nav-left-top">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=nav-left-top">France travel advice</a></p>
+
+    {% call govukInsetText() %}
+        Navigation on the left. Top of the navigation is aligned with the guide's content under the combined heading. This also means that related content links or the step by step nav is moved down under the chapter content and pagination.
+    {% endcall %}
+
+    <p class="govuk-body"> <a class="govuk-link" href="/guides/evisa/index?layout=nav-left">View your eVisa and get a share code to prove your immigration status</a></p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/universal-credit/index?layout=nav-left">Universal Credit</a> - shorter titles</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/right-to-rent/index?layout=nav-left">Prove your right to rent in England</a> - generic chapter titles like 'Overview'</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/self-assessment-tax/index?layout=nav-left">Self Assessment tax returns</a> - generic chapter titles like 'Overview' and a long navigation list</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/student-finance/index?layout=nav-left">Student finance for undergraduates</a> - guide with step-by-step</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="/guides/travel-advice-france/index?layout=nav-left">France travel advice</a></p>
+
+    </div>
+</div>
+
+{% endblock %}

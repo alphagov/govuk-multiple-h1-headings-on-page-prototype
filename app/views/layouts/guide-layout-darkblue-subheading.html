@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{# In the combined H1 the chapter title is an xl heading and guide title is a bold dark blue below. #}
+
+
+{% from "includes/guide-step-by-step-header.njk" import renderStepByStepHeader %}
+{% from "includes/guide-step-by-step-nav.njk" import renderStepNavSidebar %}
+{% from "includes/guide-subnav.njk" import renderGuideSubnav  %}
+{% from "includes/guide-service-nav.njk" import renderGuideServiceNav  %}
+{% from "includes/guide-pagination.njk" import renderGuidePagination %}
+{% from "includes/guide-related.njk" import renderRelatedContent, renderExploreTopics  %}
+
+{% block pageTitle %}
+    {{ currentGuide.title }}: {{ currentPageTitle }} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+    {% if currentGuide.stepByStep %}
+        {{ renderStepByStepHeader(currentGuide.stepByStep) }}
+    {% elif currentGuide.breadcrumbs and currentGuide.breadcrumbs.length %}
+        {{ govukBreadcrumbs({
+            items: currentGuide.breadcrumbs
+        })}}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row app-page-with-service-nav">
+    <div class="govuk-grid-column-two-thirds">
+        {# Combined heading #}
+
+         <h1 class="govuk-heading-xl">
+          <span role="text">
+            <!-- Chapter title -->
+            {{ currentPageTitle }}
+
+            <span class="govuk-guide-title heading-blue">
+                <span class="govuk-visually-hidden"> - </span>
+                <!-- Guide title -->
+                {{ currentGuide.title }}
+            </span>        
+        </span>
+      </h1>
+
+      {# Render mobile navigation #}
+
+      {{ renderGuideServiceNav(currentGuide, currentPageSlug, guideId, activeLayout) }}
+
+      {# Render desktop navigation #}
+
+      {{ renderGuideSubnav(currentGuide, currentPageSlug, guideId, activeLayout) }} 
+    </div>
+</div>
+
+{# Individual page body content #}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% block guideBody %} {% endblock %}
+
+        {# Render previous / next pagination #}
+
+        {{ renderGuidePagination(pagination) }}
+
+
+        <p class="govuk-body govuk-!-margin-bottom-8">
+            <a class="govuk-link" href="#">View a printable version of the whole guide</a>
+        </p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        {# Check stepNav property on currentGuide #}
+            {% if currentGuide.stepNav %}
+                {% include "../includes/_step-by-step.html" %}
+            {% else %}
+                {{ renderRelatedContent(currentGuide.related) }}
+            {% endif %}
+    </div>
+</div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {# Shared explore the topic section #}
+        {{ renderExploreTopics(currentGuide.related) }}
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
