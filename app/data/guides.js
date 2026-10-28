@@ -224,12 +224,12 @@ module.exports = {
           },
         pages: [
             { slug: "index", text: "Overview" },
-            { slug: "", text: "Eligibility"},
-            { slug: "", text: "New full-time students"},
-            { slug: "", text: "Continuing full-time students"},
-            { slug: "", text: "Part-time students"},
-            { slug: "", text: "Extra financial help"},
-            { slug: "", text: "Apply"}
+            { slug: "who-qualifies", text: "Eligibility"},
+            { slug: "new-fulltime-students", text: "New full-time students"},
+            { slug: "continuing-fulltime-students", text: "Continuing full-time students"},
+            { slug: "parttime-students", text: "Part-time students"},
+            { slug: "extra-help", text: "Extra financial help"},
+            { slug: "apply", text: "Apply"}
         ]
     },
     "travel-advice-france": {
