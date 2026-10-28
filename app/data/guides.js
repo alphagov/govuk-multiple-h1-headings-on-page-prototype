@@ -68,14 +68,14 @@ module.exports = {
         pages: [
             { slug: "index", text: "What Universal Credit is" },
             { slug: "eligibility", text: "Eligibility"},
-            { slug: "", text: "What you'll get"},
-            { slug: "", text: "How your wages affect your payments"},
-            { slug: "", text: "How you're paid"},
-            { slug: "", text: "How to claim"},
-            { slug: "", text: "Your claimant commitment"},
-            { slug: "", text: "Get an advance or other financial support"},
-            { slug: "", text: "Report a change of circumstances"},
-            { slug: "", text: "Contact Universal Credit"},
+            { slug: "what-youll-get", text: "What you'll get"},
+            { slug: "how-your-wages-affect-your-payments", text: "How your wages affect your payments"},
+            { slug: "how-youre-paid", text: "How you're paid"},
+            { slug: "how-to-claim", text: "How to claim"},
+            { slug: "your-claimant-commitment", text: "Your claimant commitment"},
+            { slug: "get-advance-or-financial-support", text: "Get an advance or other financial support"},
+            { slug: "changes-of-circumstances", text: "Report a change of circumstances"},
+            { slug: "contact-universal-credit", text: "Contact Universal Credit"},
 
         ]
     },
@@ -98,9 +98,9 @@ module.exports = {
         },
         pages: [
             { slug: "index", text: "Overview" },
-            { slug: "", text: "Get a share code online"},
-            { slug: "", text: "Using immigration documents"},
-            { slug: "", text: "Using other documents"}
+            { slug: "get-a-share-code-online", text: "Get a share code online"},
+            { slug: "using-immigration-documents", text: "Using immigration documents"},
+            { slug: "using-other-documents", text: "Using other documents"}
         ]
     },
     "self-assessment-tax": {
@@ -133,16 +133,16 @@ module.exports = {
         },
         pages: [
             { slug: "index", text: "Overview" },
-            { slug: "", text: "Who must send a tax return"},
-            { slug: "", text: "Registering for Self Assessment"},
-            { slug: "", text: "Sending a return"},
-            { slug: "", text: "If you no longer need to send a tax return"},
-            { slug: "", text: "Deadlines"},
-            { slug: "", text: "Penalties"},
-            { slug: "", text: "If you need to change your return"},
-            { slug: "", text: "Claiming a tax refund"},
-            { slug: "", text: "How to get help"},
-            { slug: "", text: "Returns for someone who has died"}
+            { slug: "who-must-send-a-tax-return", text: "Who must send a tax return"},
+            { slug: "registering", text: "Registering for Self Assessment"},
+            { slug: "sending-return", text: "Sending a return"},
+            { slug: "no-longer-need-to-send-a-tax-return", text: "If you no longer need to send a tax return"},
+            { slug: "deadlines", text: "Deadlines"},
+            { slug: "penalties", text: "Penalties"},
+            { slug: "corrections", text: "If you need to change your return"},
+            { slug: "claiming-a-tax-refund", text: "Claiming a tax refund"},
+            { slug: "get-help", text: "How to get help"},
+            { slug: "returns-for-someone-who-has-died", text: "Returns for someone who has died"}
         ]
     },
     "student-finance": {
@@ -224,12 +224,12 @@ module.exports = {
           },
         pages: [
             { slug: "index", text: "Overview" },
-            { slug: "", text: "Eligibility"},
-            { slug: "", text: "New full-time students"},
-            { slug: "", text: "Continuing full-time students"},
-            { slug: "", text: "Part-time students"},
-            { slug: "", text: "Extra financial help"},
-            { slug: "", text: "Apply"}
+            { slug: "who-qualifies", text: "Eligibility"},
+            { slug: "new-fulltime-students", text: "New full-time students"},
+            { slug: "continuing-fulltime-students", text: "Continuing full-time students"},
+            { slug: "parttime-students", text: "Part-time students"},
+            { slug: "extra-help", text: "Extra financial help"},
+            { slug: "apply", text: "Apply"}
         ]
     },
     "travel-advice-france": {
@@ -256,9 +256,10 @@ module.exports = {
         },
         pages: [
             { slug: "index", text: "Warnings and insurance" },
-            { slug: "", text: "Safety and security"},
-            { slug: "", text: "Health"},
-            { slug: "", text: "Getting help"}
+            { slug: "entry-requirements", text: "Entry requirements" },
+            { slug: "safety-and-security", text: "Safety and security"},
+            { slug: "health", text: "Health"},
+            { slug: "getting-help", text: "Getting help"}
         ]
     },
     "guide-name": {
