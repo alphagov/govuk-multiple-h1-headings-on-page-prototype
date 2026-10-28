@@ -133,16 +133,16 @@ module.exports = {
         },
         pages: [
             { slug: "index", text: "Overview" },
-            { slug: "", text: "Who must send a tax return"},
-            { slug: "", text: "Registering for Self Assessment"},
-            { slug: "", text: "Sending a return"},
-            { slug: "", text: "If you no longer need to send a tax return"},
-            { slug: "", text: "Deadlines"},
-            { slug: "", text: "Penalties"},
-            { slug: "", text: "If you need to change your return"},
-            { slug: "", text: "Claiming a tax refund"},
-            { slug: "", text: "How to get help"},
-            { slug: "", text: "Returns for someone who has died"}
+            { slug: "who-must-send-a-tax-return", text: "Who must send a tax return"},
+            { slug: "registering", text: "Registering for Self Assessment"},
+            { slug: "sending-return", text: "Sending a return"},
+            { slug: "no-longer-need-to-send-a-tax-return", text: "If you no longer need to send a tax return"},
+            { slug: "deadlines", text: "Deadlines"},
+            { slug: "penalties", text: "Penalties"},
+            { slug: "corrections", text: "If you need to change your return"},
+            { slug: "claiming-a-tax-refund", text: "Claiming a tax refund"},
+            { slug: "get-help", text: "How to get help"},
+            { slug: "returns-for-someone-who-has-died", text: "Returns for someone who has died"}
         ]
     },
     "student-finance": {
