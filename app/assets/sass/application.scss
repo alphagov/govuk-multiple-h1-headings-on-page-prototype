@@ -4,6 +4,18 @@
 // 
 
 // Add extra styles here
+abbr {
+  cursor: help;
+  text-decoration: none;
+}
+
+.contact {
+  position: relative;
+  border-left: 1px solid var(--govuk-border-colour, #cecece);
+  padding-left: 15px;
+  margin: 0 0 30px;
+}
+
 
 .app-subnav {
   // Since the back to top link is outside the flow of the document we need to create a space for it.

@@ -68,14 +68,14 @@ module.exports = {
         pages: [
             { slug: "index", text: "What Universal Credit is" },
             { slug: "eligibility", text: "Eligibility"},
-            { slug: "", text: "What you'll get"},
-            { slug: "", text: "How your wages affect your payments"},
-            { slug: "", text: "How you're paid"},
-            { slug: "", text: "How to claim"},
-            { slug: "", text: "Your claimant commitment"},
-            { slug: "", text: "Get an advance or other financial support"},
-            { slug: "", text: "Report a change of circumstances"},
-            { slug: "", text: "Contact Universal Credit"},
+            { slug: "what-youll-get", text: "What you'll get"},
+            { slug: "how-your-wages-affect-your-payments", text: "How your wages affect your payments"},
+            { slug: "how-youre-paid", text: "How you're paid"},
+            { slug: "how-to-claim", text: "How to claim"},
+            { slug: "your-claimant-commitment", text: "Your claimant commitment"},
+            { slug: "get-advance-or-financial-support", text: "Get an advance or other financial support"},
+            { slug: "changes-of-circumstances", text: "Report a change of circumstances"},
+            { slug: "contact-universal-credit", text: "Contact Universal Credit"},
 
         ]
     },
