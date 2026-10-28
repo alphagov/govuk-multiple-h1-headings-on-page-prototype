@@ -2,92 +2,93 @@
 
 {% block guideBody %}
 
-<p class="govuk-body">You can choose whether to get an eVisa if you have physical proof of your immigration status, such as a wet ink stamp or vignette (sticker) which: </p>
-
-
-<ul class="govuk-list govuk-list--bullet">
-    <li>
-        has no expiry date 
-    </li>
-    <li>
-        proves you have settlement in the UK - also known as indefinite leave to remain (ILR) or indefinite leave to enter (ILE)
-    </li>
-</ul>
-
-<p class="govuk-body">If you get an eVisa then you’ll have a digital record to prove your identity and immigration status.</p>
-
-<p class="govuk-body">Getting an eVisa will not change your immigration status. You’ll still be able to use your physical document.</p>
-
-<p class="govuk-body">To get an eVisa, you need to make a free ‘no time limit’ (NTL) application.</p>
-
-{% call govukInsetText() %}
-  Do not make an NTL application if you have another type of evidence of your settled status in the UK, for example an expired biometric residence permit (BRP) or status under the EU Settlement Scheme. There’s a different way to access your eVisa.
-{% endcall %}
-
-<h2 class="govuk-heading-l">
-Make an NTL application
-</h2>
-
-<p class="govuk-body">You need:
-
+<p class="govuk-body">
+  You can choose whether to get an eVisa if you have physical proof of your immigration status, such as a wet ink stamp or vignette (sticker) which:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
-    <li>
-        a phone number and email address that you can use each time you sign in
-    </li>
-    <li>
-        the passport or travel document you used when you last entered the UK
-    </li>
+  <li>has no expiry date</li>
+  <li>proves you have settlement in the UK – also known as indefinite leave to remain (<abbr title="Indefinite leave to remain">ILR</abbr>) or indefinite leave to enter (<abbr title="Indefinite leave to enter">ILE</abbr>)</li>
 </ul>
 
-<p class="govuk-body">You’ll also need the physical document that proves that you have settlement, if you have one.</p>
-<p class="govuk-body">You need a UK Visas and Immigration (UKVI) account to access your eVisa. You’ll create a UKVI account either:</p>
+<p class="govuk-body">
+  If you get an eVisa then you'll have a digital record to prove your identity and immigration status.
+</p>
+
+<p class="govuk-body">
+  Getting an eVisa will not change your immigration status. You'll still be able to use your physical document.
+</p>
+
+<p class="govuk-body">
+  To get an eVisa, you need to make a free 'no time limit' (<abbr title="No time limit">NTL</abbr>) application.
+</p>
+
+<p class="govuk-body">
+  Do not make an NTL application if you have another type of evidence of your settled status in the UK, for example an expired biometric residence permit (<abbr title="Biometric residence permit">BRP</abbr>) or status under the EU Settlement Scheme. There's a <a class="govuk-link" href="#">different way to access your eVisa</a>.
+</p>
+
+<h2 class="govuk-heading-l">Make an NTL application</h2>
+
+<p class="govuk-body">You need:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-    <li>
-        at the start of your NTL application - if you have a valid passport 
-    </li>
-    <li>
-        when your NTL application is approved - if you do not have a valid passport
-    </li>
+  <li>a phone number and email address that you can use each time you sign in</li>
+  <li>the passport or travel document you used when you last entered the UK</li>
 </ul>
 
-{{ govukButton({
-  text: "Make an NTL application",
-  href: "#",
-  isStartButton: true
-}) }}
+<p class="govuk-body">
+  You'll also need the physical document that proves that you have settlement, if you have one.
+</p>
 
-<h2 class="govuk-heading-l">
-Make an NTL application
-</h2>
+<p class="govuk-body">
+  You need a UK Visas and Immigration (<abbr title="UK Visas and Immigration">UKVI</abbr>) account to access your eVisa. You'll create a UKVI account either:
+</p>
 
-<p class="govuk-body">You’ll need to have your fingerprints and photo (biometric information) taken at a UK Visa and Citizenship Application Services (UKVCAS) service point.</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>at the start of your NTL application – if you have a valid passport</li>
+  <li>when your NTL application is approved – if you do not have a valid passport</li>
+</ul>
 
-<p class="govuk-body">You’ll also be asked to provide supporting documents. You’ll be told what you need at the end of your application.</p>
+<a href="#" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Make an NTL application
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+  </svg>
+</a>
+
+<h2 class="govuk-heading-l">After you apply</h2>
+
+<p class="govuk-body">
+  You'll need to have your fingerprints and photo (biometric information) taken at a UK Visa and Citizenship Application Services (<abbr title="UK Visa and Citizenship Application Services">UKVCAS</abbr>) service point.
+</p>
+
+<p class="govuk-body">
+  You'll also be asked to provide supporting documents. You'll be told what you need at the end of your application.
+</p>
 
 <p class="govuk-body">You can either:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-    <li>
-        upload the documents into the UKVCAS online service 
-    </li>
-    <li>
-        pay to have them scanned at your UKVCAS appointment
-    </li>
+  <li>upload the documents into the UKVCAS online service</li>
+  <li>pay to have them scanned at your UKVCAS appointment</li>
 </ul>
 
-<p class="govuk-body">It can take up to 6 months to process an NTL application. </p>
+<p class="govuk-body">
+  It can take up to 6 months to process an NTL application.
+</p>
 
-<p class="govuk-body">You can continue to use your physical immigration document while your application is processed.</p>
+<p class="govuk-body">
+  You can continue to use your physical immigration document while your application is processed.
+</p>
 
-<h2 class="govuk-heading-l">
-Get help
-</h2>
+<h2 class="govuk-heading-l">Get help</h2>
 
-<p class="govuk-body">You can use webchat to ask about your eVisa or UKVI account.</p>
+<p class="govuk-body">
+  You can <a class="govuk-link" href="#">use webchat</a> to ask about your eVisa or UKVI account.
+</p>
 
-<p class="govuk-body">You can also watch eVisa support videos.</p>
+<p class="govuk-body">
+  You can also watch <a class="govuk-link" href="#">eVisa support videos</a>.
+</p>
 
 {% endblock %}
