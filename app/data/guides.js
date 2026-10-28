@@ -256,9 +256,10 @@ module.exports = {
         },
         pages: [
             { slug: "index", text: "Warnings and insurance" },
-            { slug: "", text: "Safety and security"},
-            { slug: "", text: "Health"},
-            { slug: "", text: "Getting help"}
+            { slug: "entry-requirements", text: "Entry requirements" },
+            { slug: "safety-and-security", text: "Safety and security"},
+            { slug: "health", text: "Health"},
+            { slug: "getting-help", text: "Getting help"}
         ]
     },
     "guide-name": {

@@ -280,9 +280,6 @@ abbr {
   }
 }
 
-
-.govspeak, // Legacy class name that's still used in some content items - needs to be kept until `.govspeak` is removed from the content items.
-.gem-c-govspeak {
   .call-to-action {
     margin: 0 0 govuk-spacing(4);
     background-color: govuk-colour("black", $variant: "tint-95");
@@ -296,7 +293,7 @@ abbr {
       margin: govuk-spacing(3) 0;
     }
   }
-}
+
 
 .govuk-guide-title {
   display:block;
