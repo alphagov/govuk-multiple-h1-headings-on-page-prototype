@@ -98,9 +98,9 @@ module.exports = {
         },
         pages: [
             { slug: "index", text: "Overview" },
-            { slug: "", text: "Get a share code online"},
-            { slug: "", text: "Using immigration documents"},
-            { slug: "", text: "Using other documents"}
+            { slug: "get-a-share-code-online", text: "Get a share code online"},
+            { slug: "using-immigration-documents", text: "Using immigration documents"},
+            { slug: "using-other-documents", text: "Using other documents"}
         ]
     },
     "self-assessment-tax": {
