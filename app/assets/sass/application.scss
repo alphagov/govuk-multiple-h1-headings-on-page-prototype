@@ -344,6 +344,10 @@ abbr {
       }
     }
    }
+
+   &.no-border {
+    border: none;
+   }
 }
 
 // Add step by step nav styling
@@ -1096,4 +1100,53 @@ $top-border: solid 1px govuk-functional-colour("border");
     }
     // stylelint-enable max-nesting-depth
   }
+}
+
+// Dot style from the Brand guide https://github.com/alphagov/govuk-brand-guidelines/blob/a3743c1abe6b465c74bf3d50b147656c382c9387/src/_stylesheets/_aria-current.scss
+
+// Style aria-current lists
+.app-current-with-dot {
+  --dot-spacing: #{govuk-spacing(2)};
+
+  [aria-current] {
+    font-weight: bold;
+  }
+
+  [aria-current='page'] {
+    display: inline-flex;
+    align-items: baseline;
+
+    &::before {
+      $dot-size: 0.5rem;
+
+      content: '';
+      display: block;
+      width: $dot-size;
+      height: $dot-size;
+      margin-right: var(--dot-spacing);
+      margin-left: calc(-#{$dot-size} - var(--dot-spacing));
+      // Prevent dot from shrinking in a flex context
+      flex-shrink: 0;
+
+      // Better alignment with the text
+      transform: translateY(-1px);
+      border-radius: 100%;
+      background: currentcolor;
+
+      // Force dot colour to match link text in high contrast mode
+      // stylelint-disable-next-line max-nesting-depth
+      @media (forced-colors: active) {
+        background: LinkText;
+      }
+    }
+  }
+}
+
+// 
+
+.app-subnav--guide {
+  background-color: govuk-colour("blue", $variant: "tint-95");
+  border-top: 4px solid govuk-colour("blue", $variant: "shade-25");
+  box-shadow: 0 2px 0 govuk-colour("blue", $variant: "shade-25");
+  
 }
