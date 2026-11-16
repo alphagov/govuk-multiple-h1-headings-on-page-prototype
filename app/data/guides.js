@@ -262,6 +262,47 @@ module.exports = {
             { slug: "getting-help", text: "Getting help"}
         ]
     },
+    "business-rates-relief": {
+        title: "Business rates relief",
+        breadcrumbs: [
+            { text: "Home", href: '#' },
+            { text: "Business and self-employed", href: '#' },
+            { text: "Keep your business running", href: '#' }
+        ],
+        related: {
+            links: [
+                { text: "Business rates", href: '#' },
+                { text: "Contact your council about business rates bill", href: '#' },
+                { text: "Get help and support for your business", href: '#' },
+                { text: "Find a business rates valuation", href: '#' },
+                { text: "Estimate your business rates", href: '#' }
+            ],
+            collections: [
+                { text: "Allowances, expenses and reliefs when you run a business", href: '#' }
+            ],
+            topics: [
+                { text: "Keep your business running", href: '#' }
+            ]
+        },
+        pages: [
+            { slug: "index", text: "Types of business rates relief" },
+            { slug: "small-business-rate-relief", text: "Small business rate relief"},
+            { slug: "retail-discount", text: "Retail, hospitality and leisure relief"},
+            { slug: "rural-rate-relief", text: "Rural rate relief"},
+            { slug: "charitable-rate-relief", text: "Charitable rate relief"},
+            { slug: "empty-property-relief", text: "Empty property relief"},
+            { slug: "improvement-relief", text: "Improvement relief"},
+            { slug: "transitional-relief", text: "Transitional relief"},
+            { slug: "supporting-small-business-relief", text: "Supporting small business relief"},
+            { slug: "hardship-relief", text: "Hardship relief"},
+            { slug: "enterprise-zones", text: "Enterprise zones"},
+            { slug: "freeports-relief", text: "Freeports relief"},
+            { slug: "heat-networks-relief", text: "Heat networks relief"},
+            { slug: "pubs-and-live-music-venues-relief", text: "Pubs and live music venues relief"},
+            { slug: "exempt-properties", text: "Exempt properties"},
+            { slug: "get-help-with-business-rates-relief", text: "Get help with business rates relief"}
+        ]
+    },
     "guide-name": {
         title: "Guide Title",
         breadcrumbs: [

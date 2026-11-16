@@ -27,7 +27,7 @@ includes mobile navigation #}
 
 {% block content %}
 
-<div class="govuk-grid-row app-page-with-service-nav">
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         {# Combined heading #}
 
@@ -43,6 +43,11 @@ includes mobile navigation #}
                 {{ currentPageTitle }}
             </span>
         </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row app-page-with-service-nav">
+    <div class="govuk-grid-column-two-thirds">
 
       {# Render mobile navigation #}
 
@@ -51,12 +56,9 @@ includes mobile navigation #}
       {# Render desktop navigation #}
 
       {{ renderGuideSubnav(currentGuide, currentPageSlug, guideId, activeLayout) }} 
-    </div>
-</div>
+   
 
-{# Individual page body content #}
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    {# Individual page body content #}
 
         {% block guideBody %} {% endblock %}
 
@@ -80,6 +82,9 @@ includes mobile navigation #}
             {% endif %}
     </div>
 </div>
+
+
+
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
