@@ -127,20 +127,20 @@
     
     {% set layoutQuery = "?layout=" ~ activeLayout if activeLayout else "" %}
 
-     <nav class="app-subnav app-subnav--guide govuk-!-padding-top-6 govuk-!-padding-left-6 govuk-!-padding-bottom-2 govuk-!-margin-bottom-7" aria-labelledby="subnav-heading">
-          <header class="govuk-!-margin-bottom-2">
+     <nav class="app-subnav app-subnav--guide" aria-labelledby="subnav-heading">
+          <header class="app-subnav-header">
             
-            <h2 id="subnav-heading" class="govuk-heading-s govuk-!-margin-bottom-1">
+            <h2 id="subnav-heading" class="govuk-heading-s">
               In this guide
             </h2>
             
           </header>
-          <ul class="govuk-list app-current-with-dot">
+          <ul class="govuk-list app-link-list app-current-with-dot">
             {% for page in guide.pages %}
                 {% set isCurrent = (page.slug == currentPageSlug) %}
                 {% set pageHref = "/guides/" ~ guideId ~ "/" ~ page.slug ~ layoutQuery %}
 
-                <li class=" {% if isCurrent %}current{% endif %}">
+                <li class="{% if isCurrent %}current{% endif %}">
                     <a class=" govuk-link govuk-link--no-visited-state govuk-link--no-underline" 
                         href="{{ pageHref }}" 
                         {% if isCurrent %}aria-current="page"{% endif %}>
