@@ -112,3 +112,77 @@
         </aside>
     {% endif %}
 {% endmacro %}
+
+{% macro renderRelatedThreeColumns(related) %}
+    {% if related and (related.links.length or related.collections.length or related.topics.length) %}
+        <div class="govuk-grid-row guide-related-items">
+
+            {# Column 1: Related content #}
+            <div class="govuk-grid-column-one-third">
+                {% if related.links and related.links.length %}
+                    <aside>
+                        <h2 class="govuk-heading-s" id="related-content">
+                            Related content
+                        </h2>
+                        <nav role="navigation" aria-labelledby="related-content">
+                            <ul class="govuk-list">
+                                {% for item in related.links %}
+                                    <li>
+                                        <a class="govuk-link" href="{{ item.href }}">
+                                            {{ item.text }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </aside>
+                {% endif %}
+            </div>
+
+            {# Column 2: Collection #}
+            <div class="govuk-grid-column-one-third">
+                {% if related.collections and related.collections.length %}
+                    <aside>
+                        <h2 class="govuk-heading-s" id="related-collections">
+                            Collection
+                        </h2>
+                        <nav role="navigation" aria-labelledby="related-collections">
+                            <ul class="govuk-list">
+                                {% for item in related.collections %}
+                                    <li>
+                                        <a class="govuk-link" href="{{ item.href }}">
+                                            {{ item.text }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </aside>
+                {% endif %}
+            </div>
+
+            {# Column 3: Explore the topic #}
+            <div class="govuk-grid-column-one-third">
+                {% if related.topics and related.topics.length %}
+                    <aside>
+                        <h2 class="govuk-heading-s" id="related-nav-topics">
+                            Explore the topic
+                        </h2>
+                        <nav role="navigation" aria-labelledby="related-nav-topics">
+                            <ul class="govuk-list govuk-list--spaced">
+                                {% for topic in related.topics %}
+                                    <li>
+                                        <a class="govuk-link" href="{{ topic.href }}">
+                                            {{ topic.text }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </aside>
+                {% endif %}
+            </div>
+
+        </div>
+    {% endif %}
+{% endmacro %}

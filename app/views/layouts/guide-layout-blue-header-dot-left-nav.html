@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{# Template with combined heading on a blue background: the guide title as xl on top and chapter title as xl caption below 
+includes mobile navigation #}
+
+{% from "includes/guide-step-by-step-header.njk" import renderStepByStepHeader %}
+{% from "includes/guide-step-by-step-nav.njk" import renderStepNavSidebar %}
+{% from "includes/guide-subnav.njk" import renderGuideSubnavHeadingInThisGuideDot  %}
+{% from "includes/guide-service-nav.njk" import renderGuideServiceNav  %}
+{% from "includes/guide-pagination.njk" import renderGuidePagination %}
+{% from "includes/guide-related.njk" import renderRelatedThreeColumns  %}
+
+{% block pageTitle %}
+    {{ currentGuide.title }}: {{ currentPageTitle }} - GOV.UK
+{% endblock %}
+
+{% block container %}
+
+<div class="breadcrumb-wrapper">
+    <div class="govuk-width-container"> 
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                {% if currentGuide.stepByStep %}
+                    {{ renderStepByStepHeader(currentGuide.stepByStep) }}
+                {% elif currentGuide.breadcrumbs and currentGuide.breadcrumbs.length %}
+                    {{ govukBreadcrumbs({
+                        items: currentGuide.breadcrumbs
+                    })}}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="content" class="content" lang="en">
+
+<header class="gem-c-inverse-header gem-c-inverse-header--full-width govuk-!-padding-bottom-8 govuk-!-margin-bottom-0">
+    <div class="govuk-width-container"> 
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                {# Combined heading #}
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
+                    <span role="text">                 
+                        <!-- Guide title -->
+                        {{ currentGuide.title }}
+                        <span class="govuk-visually-hidden"> - </span>
+
+                        <span class="govuk-heading-l govuk-!-margin-top-6 govuk-!-margin-bottom-0">
+                            <!-- Chapter title -->
+                            {{ currentPageTitle }}
+                        </span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+{# Individual page body content &n navigation #}
+<div class="govuk-width-container"> 
+    <div class="govuk-grid-row app-guide-navigation">
+
+        <div class="govuk-grid-column-one-third guide-left-navigation">
+            {# Render subnav on the left on desktop #}
+            {{ renderGuideSubnavHeadingInThisGuideDot(currentGuide, currentPageSlug, guideId, activeLayout) }} 
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="guide-mobile-navigation">
+                {# Render subnav on mobile #}
+                {{ renderGuideSubnavHeadingInThisGuideDot(currentGuide, currentPageSlug, guideId, activeLayout) }} 
+            </div>
+
+            <div class="guide-chapter-content">
+                {% block guideBody %} {% endblock %}
+            </div>
+
+            {# Render previous / next pagination #}
+
+            {{ renderGuidePagination(pagination) }}
+
+            <p class="govuk-body govuk-!-margin-bottom-8"><a class="govuk-link" href="#">View a printable version of the whole guide</a></p>
+
+        {# Check stepNav property on currentGuide #}
+            {% if currentGuide.stepNav %}
+            <div class="guide-step-by-step">
+                {% include "../includes/_step-by-step-no-border.html" %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {# Full-width 3-column fallback when stepNav does not exist #}
+    {% if not currentGuide.stepNav %}
+        <div class="govuk-width-container"> 
+            {{ renderRelatedThreeColumns(currentGuide.related) }}
+        </div>
+    {% endif %}
+    
+
+</main>
+
+{% endblock %}
